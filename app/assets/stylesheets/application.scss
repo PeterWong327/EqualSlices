@@ -10,6 +10,30 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ * require_tree . //remove?
  *= require_self
  */
+
+ .header {
+   background-color: green;
+   color: #fff;
+ }
+
+h1, .login-signup {
+  color: white;
+  font-family: Georgia,serif;
+  font-weight: lighter;
+  background-color: #1CCBA7;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  padding: 10px 20px;
+}
+
+.login-signup {
+
+}
+
+h2 {
+  color: black;
+  font: helvetica;
+}

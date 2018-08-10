@@ -37,10 +37,15 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    // make if/else statement to show either login or signup form
+    
     return (
       <div className="login-form_container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          WELCOME TO EQUALSLICES
+          <h2>SPLIT EXPENSES WITH FRIENDS</h2>
+          <h4>Share bills and IOUs. Make sure everyone gets paid back.
+            Totally free for web, iPhone, and Android.
+          </h4>
           <br/>
           {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
