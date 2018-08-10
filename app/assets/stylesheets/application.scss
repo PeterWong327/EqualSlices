@@ -14,12 +14,9 @@
  *= require_self
  */
 
- .header {
-   background-color: green;
-   color: #fff;
- }
 
-h1, .login-signup {
+
+h1 {
   color: white;
   font-family: Georgia,serif;
   font-weight: lighter;
@@ -29,11 +26,16 @@ h1, .login-signup {
   padding: 10px 20px;
 }
 
-.login-signup {
 
-}
 
-h2 {
+h2, h4 {
   color: black;
   font: helvetica;
+  background-color: white;
+  display: inline-flex;
+  margin-top: auto;
+}
+
+h4 {
+
 }
