@@ -1,13 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SessionForm from '../session_form/session_form';
+import { login } from '../../actions/session_actions';
+
+
 
 const Greeting = ({ currentUser, logout }) => {
+
+  // const demo = (e) => {
+  //   e.preventDefault
+  //   this.props.demoLogin({username: "Demo", email: "demo@equalslices.com" , password: "password"})
+  // }
+
   const sessionLinks = () => (
     <nav className="login-signup">
       <h2>
       <Link to="/login">"Log in"</Link>
       &nbsp;or&nbsp;
       <Link to="/signup">"Sign up"</Link>
+      &nbsp;or&nbsp;
+      <button onClick={() => dispatch(login({
+        username: "Demo",
+        email: "demo@equalslices.com" ,
+        password: "password"}))}>Log in as a guest</button>
       </h2>
       <br/>
         <h2>SPLIT EXPENSES WITH FRIENDS</h2>

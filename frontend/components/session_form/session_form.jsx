@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demo = this.demo.bind(this);
   }
 
   update(field) {
@@ -36,6 +37,12 @@ class SessionForm extends React.Component {
     );
   }
 
+
+  demo(e) {
+    e.preventDefault();
+    this.props.demoLogin({username: "Demo", email: "demo@equalslices.com" , password: "password"});
+  }
+
   render() {
     // make if/else statement to show either login or signup form
 
@@ -46,6 +53,9 @@ class SessionForm extends React.Component {
           <br/>
           {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
+
+          <button onClick={this.demo}>Demo Login</button>
+
           <div className="login-form">
             <br/>
             <label>Hi there! My name is:
