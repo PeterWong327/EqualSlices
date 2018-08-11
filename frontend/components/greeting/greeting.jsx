@@ -9,24 +9,26 @@ const Greeting = ({ currentUser, logout }) => {
 
   const sessionLinks = () => (
     <nav className="login-signup">
-      <h2>
-      <Link className="login-main" to="/login">Log in</Link>
-      &nbsp;or&nbsp;
-      <Link className="signup-main" to="/signup">Sign up</Link>
-      &nbsp;or&nbsp;
-      <button className="button-guest" onClick={() => dispatch(login({
-        username: "Demo",
-        email: "demo@equalslices.com" ,
-        password: "password"}))}>Log in as a guest</button>
-      </h2>
+        <h3>
+          <Link className="login-main" to="/login">Log in</Link>
+          &nbsp;or&nbsp;
+          <Link className="signup-main" to="/signup">Sign up</Link>
+          &nbsp;or&nbsp;
+          <button className="button-guest" onClick={() => dispatch(login({
+            username: "Demo",
+            email: "demo@equalslices.com" ,
+            password: "password"}))}>Log in as a guest</button>
+        </h3>
       <br/>
-        <h2>SPLIT EXPENSES WITH FRIENDS</h2>
-        <br/>
-        <h4>Share bills and IOUs. Make sure everyone gets paid back.
-          Totally free for web, iPhone, and Android.
-        </h4>
+      <br/>
     </nav>
   )
+
+  // <h4>Share bills and IOUs. Make sure everyone gets paid back.
+  //   Totally free for web, iPhone, and Android.
+  // </h4>
+  // <h2>SPLIT EXPENSES WITH FRIENDS</h2>
+
 
   const personalGreeting = () => (
     <hgroup className="header-group">

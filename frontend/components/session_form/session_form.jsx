@@ -50,7 +50,7 @@ class SessionForm extends React.Component {
       } else {
         return (<label>Hi there! My name is:
           <br/>
-          <input type="text"
+          <input className="username-textbox" type="text"
             value={this.state.username}
             onChange={this.update('username')}
             className="login-input"
@@ -58,21 +58,24 @@ class SessionForm extends React.Component {
         </label>)
       }
     }
-    // make if/else statement to show either login or signup form
+
 
     return (
       <div className="login-form_container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
 
           <br/>
-          {this.props.formType} or {this.props.navLink}
-          {this.renderErrors()}
+
+
 
           <button onClick={this.demo}>Demo Login</button>
 
           <div className="login-form">
+            {this.props.formType} or {this.props.navLink}
+            <br/>
             <br/>
             {signupReq()}
+            <br/>
             <br/>
             <label>Here is my email address:
               <br/>
@@ -83,6 +86,7 @@ class SessionForm extends React.Component {
                 />
             </label>
             <br/>
+            <br/>
             <label>And here is my password:
               <br/>
               <input type="password"
@@ -92,12 +96,19 @@ class SessionForm extends React.Component {
                 />
             </label>
             <br/>
+            <br/>
             <input
               className="session-submit"
               type="submit"
               value={this.props.formType}
               />
           </div>
+
+          <div className="errors">
+            {this.renderErrors()}
+          </div>
+
+
         </form>
       </div>
     );
