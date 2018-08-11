@@ -7,19 +7,14 @@ import { login } from '../../actions/session_actions';
 
 const Greeting = ({ currentUser, logout }) => {
 
-  // const demo = (e) => {
-  //   e.preventDefault
-  //   this.props.demoLogin({username: "Demo", email: "demo@equalslices.com" , password: "password"})
-  // }
-
   const sessionLinks = () => (
     <nav className="login-signup">
       <h2>
-      <Link to="/login">"Log in"</Link>
+      <Link className="login-main" to="/login">Log in</Link>
       &nbsp;or&nbsp;
-      <Link to="/signup">"Sign up"</Link>
+      <Link className="signup-main" to="/signup">Sign up</Link>
       &nbsp;or&nbsp;
-      <button onClick={() => dispatch(login({
+      <button className="button-guest" onClick={() => dispatch(login({
         username: "Demo",
         email: "demo@equalslices.com" ,
         password: "password"}))}>Log in as a guest</button>
@@ -35,7 +30,7 @@ const Greeting = ({ currentUser, logout }) => {
 
   const personalGreeting = () => (
     <hgroup className="header-group">
-      <h2 className="header-name">{currentUser.username}</h2>
+      <h2 className="header-name">Logged in as {currentUser.username}</h2>
       <button className="header-button" onClick={logout}>Log out</button>
     </hgroup>
   )

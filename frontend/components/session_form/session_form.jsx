@@ -44,6 +44,20 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    const signupReq = () => {
+      if (this.props.formType.includes("Log")) {
+        return
+      } else {
+        return (<label>Hi there! My name is:
+          <br/>
+          <input type="text"
+            value={this.state.username}
+            onChange={this.update('username')}
+            className="login-input"
+            />
+        </label>)
+      }
+    }
     // make if/else statement to show either login or signup form
 
     return (
@@ -58,14 +72,7 @@ class SessionForm extends React.Component {
 
           <div className="login-form">
             <br/>
-            <label>Hi there! My name is:
-              <br/>
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-                />
-            </label>
+            {signupReq()}
             <br/>
             <label>Here is my email address:
               <br/>

@@ -14,7 +14,20 @@
  *= require_self
  */
 
+.login-main {
+  border-width: thin;
+  border: 5px;
+  background-color: #1CCBA7;
+  box-sizing: border-box;
+  color: white;
+  font-size: 16px;
+}
 
+.button-guest {
+  font-size: 12px;
+  background-color: #FF5600;
+  color: white;
+}
 
 h1 {
   color: white;
