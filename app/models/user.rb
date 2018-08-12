@@ -3,6 +3,20 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6}, allow_nil: true
 
+  has_many :friendings,
+    primary_key: :id,
+    foreign_key: :friender_id,
+    class_name: :User
+
+  has_many :friendings,
+    primary_key: :id,
+    foreign_key: :friendee_id,
+    class_name: :User
+
+  has_many :friends,
+    through: :friendings,
+    source: :user
+
   after_initialize :ensure_session_token
 
   attr_reader :password
