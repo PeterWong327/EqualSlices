@@ -1,7 +1,7 @@
 class CreateFriendings < ActiveRecord::Migration[5.2]
   def change
     create_table :friendings do |t|
-      t.integer, :friender_id, null: false
+      t.integer :friender_id, null: false
       t.integer :friendee_id, null: false
 
       t.timestamps
