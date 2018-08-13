@@ -4,6 +4,9 @@ import SessionForm from '../session_form/session_form';
 import { login } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 
+// <Link className="login-main" to="/login">Log in</Link>
+// &nbsp;or&nbsp;
+// <Link className="signup-main" to="/signup">Sign up</Link>
 
 
 const Greeting = ({ currentUser, logout, openModal }) => {
@@ -11,12 +14,9 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
         <h3>
-          <Link className="login-main" to="/login">Log in</Link>
+          <button className="login-main" onClick={() => openModal('login')}>Log in</button>
           &nbsp;or&nbsp;
-          <Link className="signup-main" to="/signup">Sign up</Link>
-          <button onClick={() => openModal('login')}>Log in</button>
-          &nbsp;or&nbsp;
-          <button onClick={() => openModal('signup')}>Sign up</button>
+          <button className="signup-main" onClick={() => openModal('signup')}>Sign up</button>
           &nbsp;or&nbsp;
           <button className="button-guest" onClick={() => dispatch(login({
             username: "Demo",

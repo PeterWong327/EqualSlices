@@ -9,6 +9,8 @@ import { Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import Modal from './modal/modal';
 
+// <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
+// <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
 
 const App = () => (
   <div>
@@ -21,8 +23,6 @@ const App = () => (
     </header>
 
 <Switch>
-    <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
-    <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
     <AuthRoute exact path="/" component={GreetingContainer}></AuthRoute>
     <Redirect to="/" />
 </Switch>

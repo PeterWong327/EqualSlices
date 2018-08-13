@@ -28,10 +28,10 @@
 
 .login-form {
   // float: right;
-  // padding: 100px;
-  margin-right: 75px;
-  margin-top: 100px;
-  margin-bottom: -25px;
+  padding: 20px;
+  // margin-right: 75px;
+  // margin-top: 100px;
+  // margin-bottom: -25px;
 }
 
 
@@ -74,9 +74,9 @@ input[type="text"], [type="password"] {
 }
 
 .session-submit {
-  background-color: #FF5600;
+  background-color: #1CCBA7;
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   padding: 10px;
   border-radius: 4px;
 }
@@ -142,13 +142,16 @@ h3 {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0);
   z-index: 10;
 }
 
 .modal-child {
+  background-color: #EEEEEE;
+  border-width: thin;
+  border: 1px solid gray;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 75%;
   transform: translate(-50%, -50%);
 }
