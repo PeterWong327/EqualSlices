@@ -6,7 +6,7 @@ import { openModal } from '../../actions/modal_actions';
 
 // <Link className="login-main" to="/login">Log in</Link>
 // &nbsp;or&nbsp;
-// <Link className="signup-main" to="/signup">Sign up</Link>
+// <button className="signup-main" onClick={() => openModal('signup')}>Sign up</button>
 
 
 const Greeting = ({ currentUser, logout, openModal }) => {
@@ -16,7 +16,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         <h3>
           <button className="login-main" onClick={() => openModal('login')}>Log in</button>
           &nbsp;or&nbsp;
-          <button className="signup-main" onClick={() => openModal('signup')}>Sign up</button>
+          <Link className="signup-main" to="/signup">Sign up</Link>
           &nbsp;or&nbsp;
           <button className="button-guest" onClick={() => dispatch(login({
             username: "Demo",

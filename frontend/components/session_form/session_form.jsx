@@ -48,7 +48,7 @@ class SessionForm extends React.Component {
     const signupReq = () => {
       if (this.props.formType.includes("Log")) {
         return (
-          <div>
+          <div className="login-form">
             <label>Email address:
               <br/>
               <input type="text"
@@ -57,6 +57,7 @@ class SessionForm extends React.Component {
                 className="login-input"
                 />
             </label>
+            <br/>
             <br/>
             <label>Password:
               <br/>
@@ -70,35 +71,40 @@ class SessionForm extends React.Component {
         )
       } else {
         return (
-          <div>
-            <label>Hi there! My name is:
-            <br/>
-            <input className="username-textbox" type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              className="login-input"
-              />
-          </label>
+          <div className="signup-form">
+            <label>
+              <div className="introduce-yourself">
+                INTRODUCE YOURSELF
+              </div>
+                <br/>
+                Hi there! My name is:
+                <br/>
+              <input className="username-textbox" type="text"
+                value={this.state.username}
+                onChange={this.update('username')}
+                className="login-input"
+                />
+            </label>
           <br/>
           <br/>
-          <label>Here is my email address:
-            <br/>
-            <input type="text"
-              value={this.state.email}
-              onChange={this.update('email')}
-              className="login-input"
-              />
-          </label>
+            <label>Here is my email address:
+              <br/>
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className="login-input"
+                />
+            </label>
           <br/>
           <br/>
-          <label>And here is my password:
-            <br/>
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              className="login-input"
-              />
-          </label>
+            <label>And here is my password:
+              <br/>
+              <input type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="login-input"
+                />
+            </label>
         </div>
         )
       }
