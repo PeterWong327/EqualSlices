@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SessionForm from '../session_form/session_form';
 import { login } from '../../actions/session_actions';
+import { openModal } from '../../actions/modal_actions';
 
 
 
-const Greeting = ({ currentUser, logout }) => {
+const Greeting = ({ currentUser, logout, openModal }) => {
 
   const sessionLinks = () => (
     <nav className="login-signup">
@@ -13,6 +14,9 @@ const Greeting = ({ currentUser, logout }) => {
           <Link className="login-main" to="/login">Log in</Link>
           &nbsp;or&nbsp;
           <Link className="signup-main" to="/signup">Sign up</Link>
+          <button onClick={() => openModal('login')}>Log in</button>
+          &nbsp;or&nbsp;
+          <button onClick={() => openModal('signup')}>Sign up</button>
           &nbsp;or&nbsp;
           <button className="button-guest" onClick={() => dispatch(login({
             username: "Demo",

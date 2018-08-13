@@ -7,9 +7,12 @@ import { AuthRoute } from '../util/route_util';
 import { Link } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
+import Modal from './modal/modal';
+
 
 const App = () => (
   <div>
+    <Modal />
     <header className="nav-bar">
       <h1>
         <Link to="/" className ="homepage-link">E q u a l S l i c e s</Link>

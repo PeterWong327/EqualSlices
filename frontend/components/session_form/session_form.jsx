@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { closeModal } from '../../actions/modal_actions';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(this.props.closeModal);
   }
 
   renderErrors() {
@@ -59,17 +60,15 @@ class SessionForm extends React.Component {
       }
     }
 
-
     return (
       <div className="login-form_container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
 
           <br/>
 
-
-
           <button onClick={this.demo}>Demo Login</button>
 
+          <div onClick={this.props.closeModal} className="close-x">X</div>
           <div className="login-form">
             {this.props.formType} or {this.props.navLink}
             <br/>
