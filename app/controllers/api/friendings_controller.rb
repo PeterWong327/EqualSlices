@@ -2,7 +2,8 @@ class Api::FriendingsController < ApplicationController
   before_action :require_login
 
   def index
-    @friendings = Friending.all
+    @friendings = Friending.where(friender_id: current_user.id)
+    render "api/friendings/index"
     # @friending = Friending.new(friending_params)
     # friender_id = current_user.id
     # if @friending.save
@@ -13,23 +14,25 @@ class Api::FriendingsController < ApplicationController
 
   def create
     @friending = Friending.new(friending_params)
-    @friending.friendee_id = params[:friendee_id]
+    # @friending.friendee_id = params[:friendee_id]
     @friending.friender_id = current_user.id
     if @friending.save
       render "api/friendings/show"
     else
-      render json: @friending.errors.full_messages, status: 400
+      render json: @friending.errors.full_messages, status: 401
     end
   end
 
   def show
-    @friending = Friending.find(params[:friendee_id])
+    #find by id of Friending relationship
+    @friending = Friending.find(params[:id])
+    render "api/friendings/show"
   end
 
   def destroy
-    @friending = Friending.find(params[:friendee_id])
+    @friending = Friending.find(params[:id])
     @friending.destroy
-    render "api/friendings/show"
+    #redirect in frontend
   end
 
   def friending_params

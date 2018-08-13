@@ -7,20 +7,21 @@ has_many :friend_sends,
   # has_many :friendings,
     primary_key: :id,
     foreign_key: :friender_id,
-    class_name: :User
+    class_name: :Friending
 
 has_many :friend_receives,
   # has_many :friendings,
     primary_key: :id,
     foreign_key: :friendee_id,
-    class_name: :User
+    class_name: :Friending
 
-  has_many :friends,
-    through: :friend_sends,
+# shows all friends of user
+  has_many :friender,
+    through: :friend_receives,
     source: :friender
 
-  has_many :friends,
-    through: :friend_receives,
+  has_many :friendee,
+    through: :friend_sends,
     source: :friendee
 
   after_initialize :ensure_session_token
