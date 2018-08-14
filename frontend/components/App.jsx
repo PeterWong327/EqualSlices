@@ -15,7 +15,8 @@ import FriendIndexContainer from './friendings/friend_index_container';
 
 // <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
 
-// <Route path="/" component={FriendIndexContainer}></Route>
+// <Route path="/friendings/:friendId" component={FriendDetailContainer}></Route>
+
 const App = () => (
   <div>
     <Modal />
@@ -23,12 +24,12 @@ const App = () => (
       <h1>
         <Link to="/" className ="homepage-link">E q u a l S l i c e s</Link>
       </h1>
-      <GreetingContainer />
+      <AuthRoute exact path="/" component={GreetingContainer}></AuthRoute>
     </header>
 
+    <Route path="/" component={FriendIndexContainer}></Route>
 <Switch>
     <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
-    <AuthRoute exact path="/" component={GreetingContainer}></AuthRoute>
     <Redirect to="/" />
 </Switch>
 

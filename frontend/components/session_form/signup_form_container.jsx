@@ -6,6 +6,10 @@ import SessionForm from './session_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 // navLink: <Link to="/login">Log in</Link>
+
+
+
+
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,

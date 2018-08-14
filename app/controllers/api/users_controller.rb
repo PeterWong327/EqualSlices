@@ -1,5 +1,13 @@
 class Api::UsersController < ApplicationController
 
+  # get me all the index i am trying to search for
+  def index
+    if params[:search]
+      @users = User.where(email: params[:search][:email])
+    end
+    render json: @users
+  end
+
   def create
     @user = User.new(user_params)
 

@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 const FriendIndexItem = ({ friend, deleteFriend}) => {
   return (
     <li>
-      <Link to={`/friendings/${friending.id}`}>
-        {friending.friendee_id}
+      <Link to={`/friendings/${friend.id}`}>
+        { friend.username }
       </Link>&nbsp;
-      <button onClick={() => deleteFriend(friending.id)}>Delete friend</button>
+      <button onClick={() => deleteFriend(friend.id)}>Delete friend</button>
+
     </li>);
 };
 

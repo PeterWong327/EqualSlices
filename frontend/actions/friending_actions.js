@@ -20,9 +20,9 @@ export const deleteFriend = (id) => dispatch => (
   APIUtil.deleteFriend(id).then((friend) => dispatch(removeFriend(friend)))
 );
 
-const receiveAllFriends = friends => ({
+const receiveAllFriends = payload => ({
   type: RECEIVE_ALL_FRIENDS,
-  friends
+  payload
 });
 
 const receiveFriend = friend => ({

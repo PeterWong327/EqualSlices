@@ -16,11 +16,11 @@ has_many :friend_receives,
     class_name: :Friending
 
 # shows all friends of user
-  has_many :friender,
+  has_many :frienders,
     through: :friend_receives,
     source: :friender
 
-  has_many :friendee,
+  has_many :friendees,
     through: :friend_sends,
     source: :friendee
 
