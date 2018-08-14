@@ -14,6 +14,34 @@
  *= require_self
  */
 
+// .left-sidebar, .signup-form {
+//   display: flex;
+// }
+
+ .left-sidebar {
+   margin-top: 200px;
+   background-color: white;
+   color: #999999;
+   display: flex;
+   flex-wrap: wrap;
+   width: 200px;
+   min-height:200px;
+   // padding: 20px;
+   // padding-right: 19px;
+   border-right: 1px solid #ccc;
+   text-decoration: none;
+ }
+
+/////////////////////////////////// FRIENDINGS ////////////////////////
+.friend-list-header {
+  color: #CDCCCC;
+  background-color: #f6f6f6;
+  font-size: 14px;
+}
+
+
+/////////////////////////////////// FRIENDINGS ////////////////////////
+
  ////////////////////////////////// SIGN UP ///////////////////////////
  .signup-main {
    border-width: thin;

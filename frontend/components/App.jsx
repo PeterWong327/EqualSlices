@@ -9,6 +9,7 @@ import { Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import Modal from './modal/modal';
 import FriendIndexContainer from './friendings/friend_index_container';
+
 // import Splash from './splash/splash';
 
 // <AuthRoute path="/" component={Splash}></AuthRoute>
@@ -16,6 +17,7 @@ import FriendIndexContainer from './friendings/friend_index_container';
 // <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
 
 // <Route path="/friendings/:friendId" component={FriendDetailContainer}></Route>
+// <AuthRoute exact path="/" component={GreetingContainer}></AuthRoute>
 
 const App = () => (
   <div>
@@ -24,10 +26,12 @@ const App = () => (
       <h1>
         <Link to="/" className ="homepage-link">E q u a l S l i c e s</Link>
       </h1>
-      <AuthRoute exact path="/" component={GreetingContainer}></AuthRoute>
-    </header>
+      <GreetingContainer />
 
+    </header>
     <Route path="/" component={FriendIndexContainer}></Route>
+
+
 <Switch>
     <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
     <Redirect to="/" />

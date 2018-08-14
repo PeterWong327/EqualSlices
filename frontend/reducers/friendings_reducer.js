@@ -10,7 +10,7 @@ const friendingsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_ALL_FRIENDS:
-      return action.payload.friendings;
+      return merge({}, state, action.payload.friendings);
     // case RECEIVE_FRIEND:
     //   return merge({}, state, { [action.friend.id]: action.friend} );
     // case REMOVE_FRIEND:

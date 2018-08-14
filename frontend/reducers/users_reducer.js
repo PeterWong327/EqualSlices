@@ -2,7 +2,7 @@ import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 import merge from 'lodash/merge';
 
 import {
-  RECEIVE_ALL_FRIENDS,
+  RECEIVE_ALL_FRIENDS
 } from '../actions/friending_actions';
 
 const usersReducer = (state = {}, action) => {

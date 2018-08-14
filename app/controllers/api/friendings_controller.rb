@@ -4,17 +4,10 @@ class Api::FriendingsController < ApplicationController
   def index
     @friendings = Friending.where(friender_id: current_user.id)
     render "api/friendings/index"
-    # @friending = Friending.new(friending_params)
-    # friender_id = current_user.id
-    # if @friending.save
-    #
-    # else
-    # end
   end
 
   def create
     @friending = Friending.new(friending_params)
-    # @friending.friendee_id = params[:friendee_id]
     @friending.friender_id = current_user.id
     if @friending.save
       render "api/friendings/show"

@@ -20,8 +20,11 @@ class FriendIndex extends React.Component {
     });
 
     return (
-      <div>
+      <div className="left-sidebar">
         <ul>
+          <div className="friend-list-header">
+          FRIENDS
+          </div>
           {friends}
         </ul>
       </div>
