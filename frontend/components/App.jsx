@@ -8,9 +8,11 @@ import { Link } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import Modal from './modal/modal';
+import FriendIndexContainer from './friendings/friend_index_container';
 
 // <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
 
+// <Route path="/" component={FriendIndexContainer}></Route>
 const App = () => (
   <div>
     <Modal />

@@ -2,7 +2,9 @@ import { combineReducers } from 'redux';
 import usersReducer from './users_reducer';
 import friendingsReducer from './friendings_reducer';
 
-export default combineReducers({
+const entitiesReducer = combineReducers({
   users: usersReducer,
   friendings: friendingsReducer
 });
+
+export default entitiesReducer;
