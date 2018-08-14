@@ -14,12 +14,50 @@
  *= require_self
  */
 
-.login-input {
-  // border-radius: 3px;
-  //   border-top-left-radius: 4px;
-  //   border-top-right-radius: 4px;
-  //   border-bottom-right-radius: 4px;
-  //   border-bottom-left-radius: 4px;
+ ////////////////////////////////// SIGN UP ///////////////////////////
+ .signup-main {
+   border-width: thin;
+   border: 5px;
+   background-color: #FF5600;
+   box-sizing: border-box;
+   color: white;
+   font-size: 16px;
+   padding: 10px;
+   border-radius: 4px;
+   text-decoration: none;
+ }
+
+ .login-signup {
+   color: white;
+   padding: auto;
+   // height: 20px;
+   // margin: auto;
+ }
+
+ .signup-form {
+   width: 25%;
+   margin: 0 auto;
+   // padding-left: 450px;
+   padding-top: 150px;
+   // margin-top: 125px;
+   // margin-right: 75px;
+ }
+
+ .session-submit-signup {
+   background-color: #FF5600;
+   color: white;
+   font-size: 12px;
+   padding: 10px;
+   border-radius: 4px;
+   border: 0.5px solid #15987D;
+   // justify-content: space-around;
+   // margin-left: 40px;
+   width: 50%;
+   margin: 0 auto;
+ }
+
+.signup-input {
+  width: 500px;
 }
 
 .introduce-yourself {
@@ -27,34 +65,100 @@
   font-weight: bold;
 }
 
-.errors {
+.signup-errors {
   li {
     text-decoration: none;
+    color: #FFFFFF;
   }
-  margin-top: 50px;
-  margin-right: 75px;
-  // background-color: red;
+  margin-top: 0px;
+  background-color: #DB2F4C;
   width: auto;
+  // height: 40%;
+}
+
+////////////////////////////////// SIGN UP ///////////////////////////
+
+
+
+////////////////////////////////// LOG IN ///////////////////////////
+.login-input {
+  width: 98% !important;
+  font-size: 20px;
+  color: #BBBBBB;
+  border-radius: 4px;
+    // border-top-left-radius: 4px;
+    // border-top-right-radius: 4px;
+    // border-bottom-right-radius: 4px;
+    // border-bottom-left-radius: 4px;
 }
 
 .login-form {
   // float: right;
   padding: 10px;
   // margin-right: 75px;
-  // margin-top: 100px;
+  // margin-top: 25px;
   // margin-bottom: -25px;
 }
 
-.signup-form {
-  margin-top: 125px;
-  margin-right: 75px;
+.button-guest {
+  font-size: 12px;
+  background-color: gray;
+  color: white;
+  border-radius: 4px;
 }
 
+.session-submit-login {
+  background-color: #1CCBA7;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 0.5px solid #15987D;
+  // justify-content: space-around;
+  // margin-left: 40px;
+  width: 100%;
+}
 
+.login-main {
+  border-width: thin;
+  border: 0.5px solid #b3b3b3;
+  background-color: #1CCBA7;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  text-decoration: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+}
+
+.login-errors {
+  li {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  // margin-top: 50px;
+  // margin-right: 75px;
+  background-color: #DB2F4C;
+  width: auto;
+}
+////////////////////////////////// LOG IN ///////////////////////////
+
+
+//text for sign up
+h5 {
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: lighter;
+  margin: 0 auto;
+}
 
 .nav-bar {
   // position: relative;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -67,8 +171,6 @@
   padding: 5px;
   border: 0;
 }
-
-
 
 .homepage-link {
   color: white;
@@ -83,63 +185,9 @@ h2, h4 {
   margin-top: auto;
  }
 
-
 input[type="text"], [type="password"] {
   width: 200px;
   height: 25px;
-}
-
-.session-submit {
-  background-color: #1CCBA7;
-  color: white;
-  font-size: 12px;
-  padding: 10px;
-  border-radius: 4px;
-  border: 0.5px solid #15987D;
-  // justify-content: space-around;
-  margin-left: 40px;
-}
-
-.login-main {
-  border-width: thin;
-  border: 0.5px solid #b3b3b3;
-  background-color: #1CCBA7;
-  color: white;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 4px;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-      border-bottom-left-radius: 4px;
-  text-decoration: none;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-}
-
-.signup-main {
-  border-width: thin;
-  border: 5px;
-  background-color: #FF5600;
-  box-sizing: border-box;
-  color: white;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-.login-signup {
-  color: white;
-  padding: auto;
-  // height: 20px;
-  // margin: auto;
-}
-
-.button-guest {
-  font-size: 12px;
-  background-color: gray;
-  color: white;
-  border-radius: 4px;
 }
 
 h1 {
@@ -166,11 +214,13 @@ h3 {
 }
 
 .modal-child {
+  height: 50%;
+  width: 25%;
   background-color: #EEEEEE;
   border-width: thin;
-  border: 1px solid gray;
+  border: 2px solid lightgray;
   position: absolute;
-  top: 60%;
+  top: 48%;
   left: 75%;
   transform: translate(-50%, -50%);
 }

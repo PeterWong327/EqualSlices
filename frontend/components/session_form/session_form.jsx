@@ -49,24 +49,37 @@ class SessionForm extends React.Component {
       if (this.props.formType.includes("Log")) {
         return (
           <div className="login-form">
-            <label>Email address:
+            <label>
               <br/>
-              <input type="text"
+              <input
+                placeholder="Email address"
+                type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="login-input"
                 />
             </label>
             <br/>
-            <br/>
-            <label>Password:
+            <label>
               <br/>
-              <input type="password"
+              <input
+                placeholder="Password"
+                type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
                 />
             </label>
+            <br/>
+            <br/>
+            <input
+              className="session-submit-login"
+              type="submit"
+              value={this.props.formType}
+              />
+            <div className="login-errors">
+              {this.renderErrors()}
+            </div>
           </div>
         )
       } else {
@@ -76,35 +89,53 @@ class SessionForm extends React.Component {
               <div className="introduce-yourself">
                 INTRODUCE YOURSELF
               </div>
-                <br/>
-                Hi there! My name is:
+            <br/>
+                <h5>
+                  Hi there! My name is:
+                </h5>
                 <br/>
               <input className="username-textbox" type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="login-input"
+                className="signup-input"
                 />
             </label>
-          <br/>
-          <br/>
-            <label>Here is my email address:
-              <br/>
+            <br/>
+            <br/>
+            <label>
+                <h5>
+                  Here is my email address:
+                </h5>
+                <br/>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="login-input"
+                className="signup-input"
                 />
             </label>
-          <br/>
-          <br/>
-            <label>And here is my password:
-              <br/>
+            <br/>
+            <br/>
+            <label>
+              <h5>
+                And here is my password:
+              </h5>
+                <br/>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                className="signup-input"
                 />
             </label>
+            <br/>
+            <br/>
+            <input
+              className="session-submit-signup"
+              type="submit"
+              value={this.props.formType}
+              />
+            <div className="signup-errors">
+              {this.renderErrors()}
+            </div>
         </div>
         )
       }
@@ -115,28 +146,23 @@ class SessionForm extends React.Component {
 
         <form onSubmit={this.handleSubmit} className="login-form-box">
 
-          <div className="login-form">
-
+          <div>
             {signupReq()}
-
-            <br/>
-            <br/>
-            <input
-              className="session-submit"
-              type="submit"
-              value={this.props.formType}
-              />
           </div>
-
-          <div className="errors">
-            {this.renderErrors()}
-          </div>
-
-
         </form>
       </div>
     );
   }
 }
+// <div className="errors">
+//   {this.renderErrors()}
+// </div>
 
+// <br/>
+// <br/>
+// <input
+//   className="session-submit"
+//   type="submit"
+//   value={this.props.formType}
+//   />
 export default withRouter(SessionForm);
