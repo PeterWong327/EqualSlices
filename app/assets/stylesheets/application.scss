@@ -101,10 +101,11 @@
 }
 
 .button-guest {
-  font-size: 12px;
+  font-size: 16px;
   background-color: gray;
   color: white;
   border-radius: 4px;
+  padding: 8px;
 }
 
 .session-submit-login {
@@ -147,6 +148,13 @@
 }
 ////////////////////////////////// LOG IN ///////////////////////////
 
+// text for current user name when logged in:
+.header-name {
+  background-color: #1CCBA7;
+  color: white;
+  font-size: 14px;
+  margin-top: 35px;
+}
 
 //text for sign up
 h5 {
@@ -169,6 +177,7 @@ h5 {
   // margin: auto;
   // width: auto;
   padding: 5px;
+  height: 60px;
   border: 0;
 }
 
@@ -196,7 +205,7 @@ h1 {
   font-weight: lighter;
   background-color: #1CCBA7;
   display: flex;
-  padding: 10px 20px;
+  // padding: 10px 20px;
 }
 
 h3 {
@@ -220,7 +229,7 @@ h3 {
   border-width: thin;
   border: 2px solid lightgray;
   position: absolute;
-  top: 48%;
+  top: 39%;
   left: 75%;
   transform: translate(-50%, -50%);
 }
