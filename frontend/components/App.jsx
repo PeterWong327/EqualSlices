@@ -9,6 +9,9 @@ import { Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import Modal from './modal/modal';
 import FriendIndexContainer from './friendings/friend_index_container';
+// import Splash from './splash/splash';
+
+// <AuthRoute path="/" component={Splash}></AuthRoute>
 
 // <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
 
