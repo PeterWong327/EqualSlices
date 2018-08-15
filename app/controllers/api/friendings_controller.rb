@@ -3,6 +3,7 @@ class Api::FriendingsController < ApplicationController
 
   def index
     @friendings = Friending.where(friender_id: current_user.id)
+                            .or(Friending.where(friendee_id: current_user.id))
     render "api/friendings/index"
   end
 

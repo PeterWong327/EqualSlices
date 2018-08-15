@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2018_08_12_042306) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["friendee_id"], name: "index_friendings_on_friendee_id"
+    t.index ["friender_id", "friendee_id"], name: "index_friendings_on_friender_id_and_friendee_id", unique: true
     t.index ["friender_id"], name: "index_friendings_on_friender_id"
   end
 

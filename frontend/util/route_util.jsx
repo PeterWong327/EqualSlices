@@ -13,8 +13,21 @@ const Auth = ({component: Component, path, loggedIn, exact}) => (
     )}/>
 );
 
+//checks if user is logged in before access to page is granted. App.jsx
+// contains routes for containers that will only show if user is logged in
+const Protected = ({component: Component, path, loggedIn, exact}) => (
+  <Route path={path} exact={exact} render={(props) => (
+      loggedIn ? (
+        <Component {...props} />
+        ) : (
+          <Redirect to="/signup" />
+        )
+    )}/>
+);
+
 const mapStateToProps = (state) => {
   return {loggedIn: Boolean(state.session.id)}
 };
 
 export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth));
+export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protected));

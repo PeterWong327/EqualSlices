@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-
+import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
 import {
   RECEIVE_ALL_FRIENDS,
   RECEIVE_FRIEND,
@@ -11,6 +11,8 @@ const friendingsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ALL_FRIENDS:
       return merge({}, state, action.payload.friendings);
+    case LOGOUT_CURRENT_USER:
+      return {};
     // case RECEIVE_FRIEND:
     //   return merge({}, state, { [action.friend.id]: action.friend} );
     // case REMOVE_FRIEND:

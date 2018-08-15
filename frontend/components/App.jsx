@@ -3,7 +3,7 @@ import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { Route } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { ProtectedRoute, AuthRoute } from '../util/route_util';
 import { Link } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
@@ -29,8 +29,7 @@ const App = () => (
       <GreetingContainer />
 
     </header>
-    <Route path="/" component={FriendIndexContainer}></Route>
-
+    <ProtectedRoute path="/" component={FriendIndexContainer}></ProtectedRoute>
 
 <Switch>
     <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>

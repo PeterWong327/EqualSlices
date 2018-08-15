@@ -29,7 +29,6 @@
    // padding: 20px;
    // padding-right: 19px;
    border-right: 1px solid #ccc;
-   text-decoration: none;
  }
 
 /////////////////////////////////// FRIENDINGS ////////////////////////
@@ -37,6 +36,15 @@
   color: #CDCCCC;
   background-color: #f6f6f6;
   font-size: 14px;
+}
+
+.friend-list:hover {
+  text-decoration: none;
+  background-color: lightgray;
+}
+
+.friend-list {
+  text-decoration: none;
 }
 
 

@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// <button onClick={() => deleteFriend(friend.id)}>Delete friend</button>
+
 const FriendIndexItem = ({ friend, deleteFriend}) => {
   return (
     <li>
-      <Link to={`/friendings/${friend.id}`}>
+      <Link className="friend-list" to={`/friendings/${friend.id}`}>
         { friend.username }
       </Link>&nbsp;
-      <button onClick={() => deleteFriend(friend.id)}>Delete friend</button>
 
     </li>);
 };
