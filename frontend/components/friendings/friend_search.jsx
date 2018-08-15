@@ -22,25 +22,39 @@ class Search extends React.Component {
     this.props.createFriend(this.state.search.email);
   }
 
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     return (
       <div className="add-friend-form-container">
         <form onSubmit={this.handleSubmit} className="add-friend-form-box">
           <label className="invite-friends">Invite Friends
+            <br/>
+            <br/>
             <input
               className="add-friend-email-input"
               placeholder="Email address"
               type="text"
-              onChange={this.update('email')}
-            ></input>
+              onChange={this.update('email')} />
           </label>
-          <br/>
-          <br/>
           <input
             className="add-friend-submit"
             type="submit"
-            value="Send invite and add friend">
+            value="Send invite">
           </input>
+          <div className="add-friend-errors">
+            {this.renderErrors()}
+          </div>
         </form>
       </div>
     )

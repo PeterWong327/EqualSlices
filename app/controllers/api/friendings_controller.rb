@@ -23,7 +23,7 @@ class Api::FriendingsController < ApplicationController
       end
 
     else
-      render json: ["User does not exist with provided email."],
+      render json: ["Please enter a valid email address."],
         status: 401
     end
   end
