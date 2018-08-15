@@ -7,22 +7,24 @@ class Api::FriendingsController < ApplicationController
     render "api/friendings/index"
   end
 
+# 1. Checks if a user has the email inputted.
+# 2. If user exists, try to save. If saves, renders friends.
   def create
-    if params[:search]
-      friendee = User.where(email: params[:search][:email]).first
+    friendee = User.where(email: params[:search][:email]).first
+    if friendee
+      @friending = Friending.new()
+      @friending.friender_id = current_user.id
+      @friending.friendee_id = friendee.id
+
+      if @friending.save
+        render "api/friendings/show"
+      else
+        render json: @friending.errors.full_messages, status: 401
+      end
+
     else
       render json: ["User does not exist with provided email."],
         status: 401
-    end
-
-    @friending = Friending.new()
-    @friending.friender_id = current_user.id
-    @friending.friendee_id = friendee.id
-
-    if @friending.save
-      render "api/friendings/show"
-    else
-      render json: @friending.errors.full_messages, status: 401
     end
   end
 

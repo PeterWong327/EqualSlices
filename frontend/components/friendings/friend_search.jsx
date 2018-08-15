@@ -1,5 +1,7 @@
 import React from 'react';
 
+// this.props.closeModal(); <for handleSubmit>
+
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -17,20 +19,23 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createFriend(this.state.email).then(this.props.closeModal);
+    this.props.createFriend(this.state.search.email);
   }
 
   render() {
     return (
       <div className="add-friend-form-container">
         <form onSubmit={this.handleSubmit} className="add-friend-form-box">
-          <label>Invite Friends
+          <label className="invite-friends">Invite Friends
             <input
               className="add-friend-email-input"
+              placeholder="Email address"
               type="text"
               onChange={this.update('email')}
             ></input>
           </label>
+          <br/>
+          <br/>
           <input
             className="add-friend-submit"
             type="submit"

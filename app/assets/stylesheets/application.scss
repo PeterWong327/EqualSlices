@@ -23,7 +23,7 @@
 //   display: flex;
 // }
 
- .left-sidebar, .add-friend-form-container {
+ .left-sidebar, {
    margin-top: 200px;
    background-color: white;
    color: #999999;
@@ -36,6 +36,32 @@
    border-right: 1px solid #ccc;
  }
 
+ .add-friend-form-box {
+   margin-top: -50px;
+   background-color: white;
+   color: #999999;
+   display: flex;
+   flex-wrap: wrap;
+   width: 200px;
+   min-height: 50px;
+   border-right: 1px solid #ccc;
+ }
+
+.invite-friends {
+  height: 30px;
+  width: 190px;
+  background-color: #00D2A8;
+  color: white;
+  // border: 5px;
+  // border-color: black;
+  border-width: thin;
+  border: 0.5px solid #15987D;
+}
+
+.add-friend-email-input {
+  width: 50%;
+}
+
 .add-friend-form-container {
 
 }
@@ -46,6 +72,8 @@
 
 
 /////////////////////////////////// FRIENDINGS ////////////////////////
+
+
 .user-search-btn {
   color: #CDCCCC;
   background-color: #f6f6f6;
