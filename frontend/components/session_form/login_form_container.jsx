@@ -10,7 +10,6 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 //     Signup
 //   </button>
 // ),
-// closeModal: () => dispatch(closeModal())
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
@@ -23,6 +22,7 @@ const mapDispatchToProps = dispatch => {
   return {
     processForm: (user) => dispatch(login(user)),
     demoLogin: (user) => dispatch(login(user)),
+    closeModal: () => dispatch(closeModal())
   };
 };
 

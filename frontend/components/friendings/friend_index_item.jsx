@@ -8,7 +8,7 @@ const FriendIndexItem = ({ friend, deleteFriend}) => {
     <li>
       <Link className="friend-list" to={`/friendings/${friend.id}`}>
         { friend.username }
-      </Link>&nbsp;
+      </Link>
 
     </li>);
 };
