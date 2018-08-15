@@ -9,6 +9,8 @@ import { Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import Modal from './modal/modal';
 import FriendIndexContainer from './friendings/friend_index_container';
+import FriendSearchContainer from './friendings/friend_search_container';
+
 
 // import Splash from './splash/splash';
 
@@ -26,10 +28,10 @@ const App = () => (
       <h1>
         <Link to="/" className ="homepage-link">E q u a l S l i c e s</Link>
       </h1>
-      <GreetingContainer />
-
+        <GreetingContainer />
     </header>
     <ProtectedRoute path="/" component={FriendIndexContainer}></ProtectedRoute>
+    <ProtectedRoute path="/" component={FriendSearchContainer}></ProtectedRoute>
 
 <Switch>
     <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>

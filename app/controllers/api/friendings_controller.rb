@@ -8,8 +8,17 @@ class Api::FriendingsController < ApplicationController
   end
 
   def create
-    @friending = Friending.new(friending_params)
+    if params[:search]
+      friendee = User.where(email: params[:search][:email]).first
+    else
+      render json: ["User does not exist with provided email."],
+        status: 401
+    end
+
+    @friending = Friending.new()
     @friending.friender_id = current_user.id
+    @friending.friendee_id = friendee.id
+
     if @friending.save
       render "api/friendings/show"
     else
@@ -29,8 +38,8 @@ class Api::FriendingsController < ApplicationController
     #redirect in frontend
   end
 
-  def friending_params
-    params.require(:friending).permit(:friender_id, :friendee_id)
-  end
+  # def friending_params
+  #   params.require(:search).permit(:username)
+  # end
 
 end

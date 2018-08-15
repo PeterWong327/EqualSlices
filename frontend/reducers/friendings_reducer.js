@@ -13,8 +13,9 @@ const friendingsReducer = (state = {}, action) => {
       return merge({}, state, action.payload.friendings);
     case LOGOUT_CURRENT_USER:
       return {};
-    // case RECEIVE_FRIEND:
-    //   return merge({}, state, { [action.friend.id]: action.friend} );
+    case RECEIVE_FRIEND:
+      return merge({}, state, action.friending);
+    // return merge({}, state { [action.payload.users.id]: action.payload.users });
     // case REMOVE_FRIEND:
     //   let newState = merge({}, state);
     //   delete newState[action.friendId];

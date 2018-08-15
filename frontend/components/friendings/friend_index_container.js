@@ -1,6 +1,11 @@
 import { connect } from 'react-redux';
+
 import { fetchFriends, deleteFriend } from '../../actions/friending_actions';
 import FriendIndex from './friend_index';
+import { openModal, closeModal } from '../../actions/modal_actions';
+
+//closeModal: () => dispatch(closeModal()),
+//openModal: () => dispatch(openModal(fetchFriends()))
 
 const mapStateToProps = state => {
   const currId = state.session.id;
@@ -12,7 +17,7 @@ const mapStateToProps = state => {
       return state.entities.users[friending.friender_id];
     }
   });
-  // debugger
+
   return {
     friends
   };
@@ -21,7 +26,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchFriends: () => dispatch(fetchFriends()),
-    deleteFriend: id => dispatch(deleteFriend(id))
+    deleteFriend: id => dispatch(deleteFriend(id)),
   };
 };
 

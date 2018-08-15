@@ -14,11 +14,16 @@
  *= require_self
  */
 
+
+
+
+////////////////////////////////// SIDEBAR /////////////////////////////
+
 // .left-sidebar, .signup-form {
 //   display: flex;
 // }
 
- .left-sidebar {
+ .left-sidebar, .add-friend-form-container {
    margin-top: 200px;
    background-color: white;
    color: #999999;
@@ -31,20 +36,46 @@
    border-right: 1px solid #ccc;
  }
 
+.add-friend-form-container {
+
+}
+
+ ////////////////////////////////// SIDEBAR /////////////////////////////
+
+
+
+
 /////////////////////////////////// FRIENDINGS ////////////////////////
+.user-search-btn {
+  color: #CDCCCC;
+  background-color: #f6f6f6;
+  font-size: 12px;
+  text-decoration: none;
+}
+
 .friend-list-header {
+  justify-content: space-around;
+  display: flex;
   color: #CDCCCC;
   background-color: #f6f6f6;
   font-size: 14px;
+  width: 100px;
+}
+
+.friend-list-header:hover {
+  background-color: lightgray;
+  color: gray;
 }
 
 .friend-list:hover {
   text-decoration: none;
   background-color: lightgray;
+  color: gray;
 }
 
 .friend-list {
   text-decoration: none;
+  color: gray;
 }
 
 

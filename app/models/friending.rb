@@ -1,5 +1,6 @@
 class Friending < ApplicationRecord
   validates :friender_id, :friendee_id, presence: true
+  validates :friender_id, uniqueness: { scope: :friendee_id }
 
 belongs_to :friender,
   # belongs_to :user,

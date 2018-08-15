@@ -9,11 +9,11 @@ export const fetchFriends = () => dispatch => (
 );
 
 export const fetchFriend = (id) => dispatch => (
-  APIUtil.fetchFriend(id).then((friend) => dispatch(receiveFriend(friend)))
+  APIUtil.fetchFriend(id).then((user) => dispatch(receiveFriend(user)))
 );
 
-export const createFriend = (friend) => dispatch => (
-  APIUtil.createFriend(friend).then((friend) => dispatch(receiveFriend(friend)))
+export const createFriend = (email) => dispatch => (
+  APIUtil.createFriend(email).then((user) => dispatch(receiveFriend(user)))
 );
 
 export const deleteFriend = (id) => dispatch => (
@@ -25,9 +25,9 @@ const receiveAllFriends = payload => ({
   payload
 });
 
-const receiveFriend = friend => ({
+const receiveFriend = user => ({
   type: RECEIVE_FRIEND,
-  friend
+  user
 });
 
 const removeFriend = friendId => ({

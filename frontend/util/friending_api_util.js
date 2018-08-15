@@ -12,12 +12,11 @@ export const fetchFriend = (id) => {
   });
 };
 
-//need to use additional information to get both friender_id AND friendee_id?
-export const createFriend = (friend) => {
+export const createFriend = (email) => {
   return $.ajax({
     method: "POST",
     url: `/api/friendings`,
-    data: { friend },
+    data: { search: { email } },
   });
 };
 
