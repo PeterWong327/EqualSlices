@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  balance_to_pay: 1.5
+  bill_id: 1
+  bill_recipient_id: 1
+  settled: false
+
+two:
+  balance_to_pay: 1.5
+  bill_id: 1
+  bill_recipient_id: 1
+  settled: false

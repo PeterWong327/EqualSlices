@@ -139,8 +139,11 @@
  }
 
  .login-signup {
+   display: block;
+   flex: right;
    color: white;
    padding: auto;
+   margin-top: -10px;
    // height: 20px;
    // margin: auto;
  }
@@ -259,14 +262,31 @@
 }
 ////////////////////////////////// LOG IN ///////////////////////////
 
+
+///////////////////////////////// SIGN OUT /////////////////////////
 // text for current user name when logged in:
 .header-name {
+  // display: block;
+  // flex: right;
   background-color: #1CCBA7;
   color: white;
   font-size: 16px;
-  margin-top: 10px;
+  // margin-top: 10px;
 }
 
+.header-group {
+  display: block;
+  flex: right;
+  margin-right: 10px;
+  // height: 30px;
+}
+
+.header-button {
+  // margin-top: -10px;
+}
+
+
+///////////////////////////////// SIGN OUT /////////////////////////
 //text for sign up
 h5 {
   font-size: 24px;
@@ -282,19 +302,23 @@ h5 {
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #1CCBA7;
   // background-color: transparent;
   // margin: auto;
   // width: auto;
   padding: 5px;
-  height: 60px;
+  height: 50px;
   border: 0;
 }
 
 .homepage-link {
+  display: block;
+  float: left;
   color: white;
   text-decoration: none;
+  margin-top: -15px;
+  margin-left: 10px;
 }
 
 h2, h4 {
@@ -321,6 +345,8 @@ h1 {
 
 h3 {
   font-size: 16px;
+  display: block;
+  flex: right;
 }
 
 .modal-background {

@@ -31,6 +31,16 @@ has_many :friend_receives,
     foreign_key: :biller_id,
     class_name: :User
 
+#TRANSACTIONS
+  has_many :transactions,
+    primary_key: :id,
+    foreign_key: :bill_recipient_id,
+    class_name: :User
+
+  has_many :bill_recipients,
+    through: :transactions,
+    source: :user
+
   after_initialize :ensure_session_token
 
   attr_reader :password

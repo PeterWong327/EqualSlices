@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_16_002329) do
+ActiveRecord::Schema.define(version: 2018_08_16_183819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 2018_08_16_002329) do
     t.index ["friendee_id"], name: "index_friendings_on_friendee_id"
     t.index ["friender_id", "friendee_id"], name: "index_friendings_on_friender_id_and_friendee_id", unique: true
     t.index ["friender_id"], name: "index_friendings_on_friender_id"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.float "balance_to_pay", null: false
+    t.integer "bill_id", null: false
+    t.integer "bill_recipient_id", null: false
+    t.boolean "settled", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bill_id"], name: "index_transactions_on_bill_id"
+    t.index ["bill_recipient_id"], name: "index_transactions_on_bill_recipient_id"
   end
 
   create_table "users", force: :cascade do |t|
