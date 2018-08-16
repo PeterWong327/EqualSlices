@@ -4,6 +4,7 @@ class CreateBills < ActiveRecord::Migration[5.2]
       t.integer :biller_id, null: false
       t.text :description, null: false
       t.float :balance, null: false
+      t.string :date, null: false
 
       t.timestamps
     end

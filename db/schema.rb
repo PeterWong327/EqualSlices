@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2018_08_16_002329) do
     t.integer "biller_id", null: false
     t.text "description", null: false
     t.float "balance", null: false
+    t.string "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["biller_id"], name: "index_bills_on_biller_id"

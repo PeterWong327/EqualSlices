@@ -2,9 +2,9 @@ class Api::BillsController < ApplicationController
   before_action :require_login
 
   def create
-    @bill = Bill.new(bill_params)
+    @bill = Bill.make_bill(bill_params, id)
 
-    # if @bill.save
+    # if @bill
     #
     # else
     # end
@@ -16,8 +16,6 @@ class Api::BillsController < ApplicationController
   def index
   end
 
-  def edit
-  end
 
   def update
   end
