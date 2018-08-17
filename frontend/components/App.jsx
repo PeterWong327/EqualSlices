@@ -16,11 +16,11 @@ import FriendSearchContainer from './friendings/friend_search_container';
 
 // <AuthRoute path="/" component={Splash}></AuthRoute>
 
-// <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
 
 // <Route path="/friendings/:friendId" component={FriendDetailContainer}></Route>
-// <AuthRoute exact path="/" component={GreetingContainer}></AuthRoute>
+// <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
 
+// <Redirect to="/" />
 const App = () => (
   <div>
     <Modal />
@@ -34,8 +34,9 @@ const App = () => (
     <ProtectedRoute path="/" component={FriendSearchContainer}></ProtectedRoute>
 
 <Switch>
+    <AuthRoute exact path="/" component={GreetingContainer}></AuthRoute>
     <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
-    <Redirect to="/" />
+
 </Switch>
 
   </div>
