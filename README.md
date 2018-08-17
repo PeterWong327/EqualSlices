@@ -14,7 +14,8 @@ EqualSlices, inspired by Splitwise, is an application used to split and keep tra
   To speed up the load time for logging in, I created a modal for the log-in feature to keep the user in the current page. This allows the user to click on the "log-in" button and click anywhere on the screen to get out of the log-in process if it was accidentally clicked. The initial challenge in creating a demo login was hard-coding the demo login credentials. This was solved by seeding a "guest" user in the backend database, and creating a method for the demo login button to trigger the login process with the seeded credentials.
 
   ```Ruby
-  guest = User.create(username: "Demo", email: "demo@equalslices.com" , password: "password")```
+  guest = User.create(username: "Demo", email: "demo@equalslices.com" , password: "password")
+  ```
 
   Subsequently, if a user would like to create an account, clicking the "Sign up" button brings the user to the signup page where an account can be created with three simple pieces of data: username, email address, and password. The user's password is then secured in the database using BCrypt.
 
@@ -37,7 +38,8 @@ EqualSlices, inspired by Splitwise, is an application used to split and keep tra
     return {
       friends
     };
-  };```
+  };
+  ```
 
 ## Future direction for EqualSlices
 - ##### Bills
