@@ -29,7 +29,7 @@ class FriendIndex extends React.Component {
 
     return (
       <div className="left-sidebar">
-        <ul>
+        <ul className="friend-list-box">
           <div className="friend-list-header">
           FRIENDS
           </div>
