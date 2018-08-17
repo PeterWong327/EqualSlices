@@ -3,7 +3,7 @@ import {
   RECEIVE_ALL_BILLS,
   RECEIVE_BILL,
   REMOVE_BILL
-} from ' ../actions/bill_actions';
+} from '../actions/bill_actions';
 
 const billsReducer = (state = {}, action) => {
   Object.freeze(state);

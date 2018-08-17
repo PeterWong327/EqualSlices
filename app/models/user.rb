@@ -26,20 +26,30 @@ has_many :friend_receives,
     source: :friendee
 
 #BILLS
-  has_many :bills,
+  has_many :bills_sent,
     primary_key: :id,
     foreign_key: :biller_id,
-    class_name: :User
+    class_name: :Bill
 
-#TRANSACTIONS
-  has_many :transactions,
+  has_many :bills_received,
     primary_key: :id,
     foreign_key: :bill_recipient_id,
+    class_name: :Bill
+
+#TRANSACTIONS
+  has_many :transactions_initiated,
+    primary_key: :id,
+    foreign_key: :trans_initiator_id,
     class_name: :User
 
-  has_many :bill_recipients,
-    through: :transactions,
-    source: :user
+  has_many :transactions_received,
+    primary_key: :id,
+    foreign_key: :trans_recipient_id,
+    class_name: :User
+
+  # has_many :bill_recipients,
+  #   through: :transactions,
+  #   source: :user
 
   after_initialize :ensure_session_token
 

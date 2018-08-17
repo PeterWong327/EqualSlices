@@ -17,11 +17,13 @@ ActiveRecord::Schema.define(version: 2018_08_16_183819) do
 
   create_table "bills", force: :cascade do |t|
     t.integer "biller_id", null: false
+    t.integer "bill_recipient_id", null: false
     t.text "description", null: false
     t.float "balance", null: false
     t.string "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["bill_recipient_id"], name: "index_bills_on_bill_recipient_id"
     t.index ["biller_id"], name: "index_bills_on_biller_id"
   end
 
@@ -36,14 +38,16 @@ ActiveRecord::Schema.define(version: 2018_08_16_183819) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.float "balance_to_pay", null: false
+    t.float "amount_paid", null: false
     t.integer "bill_id", null: false
-    t.integer "bill_recipient_id", null: false
+    t.integer "trans_initiator_id", null: false
+    t.integer "trans_recipient_id", null: false
     t.boolean "settled", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["bill_id"], name: "index_transactions_on_bill_id"
-    t.index ["bill_recipient_id"], name: "index_transactions_on_bill_recipient_id"
+    t.index ["trans_initiator_id"], name: "index_transactions_on_trans_initiator_id"
+    t.index ["trans_recipient_id"], name: "index_transactions_on_trans_recipient_id"
   end
 
   create_table "users", force: :cascade do |t|

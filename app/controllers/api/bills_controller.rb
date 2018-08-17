@@ -3,9 +3,11 @@ class Api::BillsController < ApplicationController
 
   def create
     biller_id = current_user.id
-    @bill = Bill.make_bill(bill_params, recipient_id)
+    #Bill.new(bill_params) after putting recipient id in bills table
+    @bill = Bill.new(bill_params)
+    # @bill = Bill.make_bill(bill_params, recipient_id)
     if @bill.save
-      render "api/friendings/show"
+      render "api/bills/show"
     else
       render json: @bill.errors.full_messages, status: 401
     end
@@ -24,7 +26,7 @@ class Api::BillsController < ApplicationController
   def update
     @bill = current_user.bills.find(params[:id])
     if @bill.update_attributes(bill_params)
-      render "api/friendings/show"
+      render "api/bills/show"
     else
       render json: @bill.errors.full_messages, status: 401
     end
@@ -33,10 +35,12 @@ class Api::BillsController < ApplicationController
   def destroy
     @bill = Bill.find(params[:id])
     @bill.destroy
+    render "api/bills/show"
   end
 
+# add recipient_id
   def bill_params
-      params.require(:bill).permit(:biller_id, :description, :balance, :date)
+      params.require(:bill).permit(:biller_id, :bill_recipient_id, :description, :balance, :date)
   end
 
 end
