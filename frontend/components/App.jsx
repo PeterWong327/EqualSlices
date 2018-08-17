@@ -11,6 +11,7 @@ import Modal from './modal/modal';
 import FriendIndexContainer from './friendings/friend_index_container';
 import FriendSearchContainer from './friendings/friend_search_container';
 import SplashContainer from './splash/splash';
+import DashboardContainer from './dashboard/dashboard';
 
 // <AuthRoute path="/" component={Splash}></AuthRoute>
 
@@ -28,6 +29,7 @@ const App = () => (
       </h1>
         <GreetingContainer />
     </header>
+    <ProtectedRoute path="/dashboard" component={DashboardContainer}></ProtectedRoute>
     <ProtectedRoute path="/" component={FriendIndexContainer}></ProtectedRoute>
     <ProtectedRoute path="/" component={FriendSearchContainer}></ProtectedRoute>
 

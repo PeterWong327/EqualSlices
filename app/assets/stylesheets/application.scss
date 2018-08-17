@@ -14,6 +14,48 @@
  *= require_self
  */
 
+
+
+
+
+///////////////////////////////// Dashboard ////////////////////////////
+
+.dashboard-main {
+  margin-top: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dashboard-header {
+  font-size: 24x !important;
+}
+
+.dashboard-add-bill-btn {
+  background-color: #FF5600;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 0.5px solid #15987D;
+  // width: 100%;
+}
+
+.dashboard-settle-btn {
+  background-color: #1CCBA7;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 0.5px solid #15987D;
+  // justify-content: space-around;
+  // margin-left: 40px;
+  // width: 100%;
+}
+
+///////////////////////////////// Dashboard ////////////////////////////
+
  //////////////////////////////// Homepage//////////////////////////////
 
 .splash-intro-text-last {
