@@ -14,8 +14,24 @@
  *= require_self
  */
 
+ //////////////////////////////// Homepage//////////////////////////////
 
+.splash-phone-img {
+    width: auto;
+    height: auto;
+    max-width: 600px;
+    max-height: 600px;
+}
 
+ .homepage-link {
+   display: block;
+   float: left;
+   color: white;
+   text-decoration: none;
+   margin-top: -15px;
+   margin-left: 10px;
+ }
+ //////////////////////////////// Homepage//////////////////////////////
 
 ////////////////////////////////// SIDEBAR /////////////////////////////
 
@@ -310,15 +326,6 @@ h5 {
   padding: 5px;
   height: 50px;
   border: 0;
-}
-
-.homepage-link {
-  display: block;
-  float: left;
-  color: white;
-  text-decoration: none;
-  margin-top: -15px;
-  margin-left: 10px;
 }
 
 h2, h4 {

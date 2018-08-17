@@ -10,9 +10,7 @@ import { Redirect } from 'react-router-dom';
 import Modal from './modal/modal';
 import FriendIndexContainer from './friendings/friend_index_container';
 import FriendSearchContainer from './friendings/friend_search_container';
-
-
-// import Splash from './splash/splash';
+import SplashContainer from './splash/splash';
 
 // <AuthRoute path="/" component={Splash}></AuthRoute>
 
@@ -34,6 +32,7 @@ const App = () => (
     <ProtectedRoute path="/" component={FriendSearchContainer}></ProtectedRoute>
 
 <Switch>
+    <AuthRoute exact path="/" component={SplashContainer}></AuthRoute>
     <AuthRoute exact path="/" component={GreetingContainer}></AuthRoute>
     <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
 

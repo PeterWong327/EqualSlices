@@ -7,25 +7,29 @@ import { openModal } from '../../actions/modal_actions';
 // <Link className="login-main" to="/login">Log in</Link>
 // &nbsp;or&nbsp;
 // <button className="signup-main" onClick={() => openModal('signup')}>Sign up</button>
+// <img className="splash-phone-img" src={window.images.splash}></img>
 
 
 const Greeting = ({ currentUser, logout, openModal }) => {
 
   const sessionLinks = () => (
-    <nav className="login-signup">
-        <h3>
-          <button className="login-main" onClick={() => openModal('login')}>Log in</button>
-          &nbsp;or&nbsp;
-          <Link className="signup-main" to="/signup">Sign up</Link>
-          &nbsp;or&nbsp;
-          <button className="button-guest" onClick={() => dispatch(login({
-            username: "Demo",
-            email: "demo@equalslices.com" ,
-            password: "password"}))}>Log in as a guest</button>
-        </h3>
-      <br/>
-      <br/>
-    </nav>
+    <div>
+      <nav className="login-signup">
+          <h3>
+            <button className="login-main" onClick={() => openModal('login')}>Log in</button>
+            &nbsp;or&nbsp;
+            <Link className="signup-main" to="/signup">Sign up</Link>
+            &nbsp;or&nbsp;
+            <button className="button-guest" onClick={() => dispatch(login({
+              username: "Demo",
+              email: "demo@equalslices.com" ,
+              password: "password"}))}>Log in as a guest</button>
+          </h3>
+        <br/>
+        <br/>
+      </nav>
+    </div>
+
   )
 
   // <h4>Share bills and IOUs. Make sure everyone gets paid back.
