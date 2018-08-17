@@ -17,7 +17,6 @@ const mapStateToProps = state => {
       return state.entities.users[friending.friender_id];
     }
   });
-
   return {
     friends
   };
