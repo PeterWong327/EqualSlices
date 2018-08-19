@@ -9,7 +9,7 @@ EqualSlices, inspired by Splitwise, is an application used to split and keep tra
 #### User authentication
   Users have the ability to create an account with a username and a unique email. For those who do not want to create an account right away, users have the ability to demo the application as a guest. The one-click demo login feature allows convenience for first-time users to explore the application without the obligation to create an account.
 
-  ![](app/assets/EqualSlicesEx.jpg)
+  ![](app/assets/images/EqualSlicesEx.jpg)
 
   To speed up the load time for logging in, I created a modal for the log-in feature to keep the user in the current page. This allows the user to click on the "log-in" button and click anywhere on the screen to get out of the log-in process if it was accidentally clicked. The initial challenge in creating a demo login was hard-coding the demo login credentials. This was solved by seeding a "guest" user in the backend database, and creating a method for the demo login button to trigger the login process with the seeded credentials.
 
