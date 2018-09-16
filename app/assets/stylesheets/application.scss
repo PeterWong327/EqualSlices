@@ -18,14 +18,46 @@
 
 
 
-///////////////////////////////// Dashboard ////////////////////////////
-
-.dashboard-main {
-  margin-top: 300px;
+///////////////////////////////// Friend Detail ////////////////////////////
+.friend-detail-name {
+  margin-top: 10%;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  background-color: blue;
+  width: 50%;
+}
+
+///////////////////////////////// Friend Detail ////////////////////////////
+
+
+
+
+///////////////////////////////// Dashboard ////////////////////////////
+.dashboard-link {
+  justify-content: space-around;
+  display: flex;
+  color: #CDCCCC;
+  background-color: #f6f6f6;
+  font-size: 14px;
+  width: 100px;
+}
+
+.dashboard-link:hover {
+  background-color: lightgray;
+  color: gray;
+}
+
+
+.dashboard-main {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  margin-left: 25%;
 }
 
 .dashboard-header {
@@ -159,11 +191,13 @@
 // }
 
  .left-sidebar, {
-   margin-top: 200px;
+   margin-top: -50px;
+   // margin-top: 200px;
    background-color: white;
    color: #999999;
    display: flex;
    flex-wrap: wrap;
+   // width: 23%;
    width: 200px;
    min-height:200px;
    // padding: 20px;

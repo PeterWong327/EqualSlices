@@ -12,6 +12,7 @@ import FriendIndexContainer from './friendings/friend_index_container';
 import FriendSearchContainer from './friendings/friend_search_container';
 import SplashContainer from './splash/splash';
 import DashboardContainer from './dashboard/dashboard';
+import FriendDetailContainer from './friendings/friend_detail_container';
 
 // <AuthRoute path="/" component={Splash}></AuthRoute>
 
@@ -29,14 +30,16 @@ const App = () => (
       </h1>
         <GreetingContainer />
     </header>
-    <ProtectedRoute path="/dashboard" component={DashboardContainer}></ProtectedRoute>
+    <ProtectedRoute path="/friendings" component={FriendDetailContainer}></ProtectedRoute>
+    <ProtectedRoute path="/" component={DashboardContainer}></ProtectedRoute>
     <ProtectedRoute path="/" component={FriendIndexContainer}></ProtectedRoute>
     <ProtectedRoute path="/" component={FriendSearchContainer}></ProtectedRoute>
 
 <Switch>
+
+  <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
     <AuthRoute exact path="/" component={SplashContainer}></AuthRoute>
     <AuthRoute exact path="/" component={GreetingContainer}></AuthRoute>
-    <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
 
 </Switch>
 

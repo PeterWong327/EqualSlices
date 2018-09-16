@@ -3,7 +3,8 @@ import FriendDetail from './friend_detail';
 import { fetchFriend } from '../../actions/friending_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  const friend = state.entities.friend[ownProps.match.params.friendId];
+  const currId = state.session.id;
+  const friend = state.entities.friendings[ownProps.match.params.friendId];
 
   return {
     friend
