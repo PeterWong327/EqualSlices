@@ -30,8 +30,8 @@ const App = () => (
       </h1>
         <GreetingContainer />
     </header>
-    <div className="container-app">
 
+    <div className="container-app">
       <div className="friend-list-container2">
         <ProtectedRoute path="/" component={FriendIndexContainer}></ProtectedRoute>
         <ProtectedRoute path="/" component={FriendSearchContainer}></ProtectedRoute>
@@ -42,13 +42,12 @@ const App = () => (
         <ProtectedRoute path="/" component={DashboardContainer}></ProtectedRoute>
       </div>
     </div>
-<Switch>
 
-  <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
-    <AuthRoute exact path="/" component={SplashContainer}></AuthRoute>
-    <AuthRoute exact path="/" component={GreetingContainer}></AuthRoute>
-
-</Switch>
+    <Switch>
+        <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
+        <AuthRoute exact path="/" component={SplashContainer}></AuthRoute>
+        <AuthRoute exact path="/" component={GreetingContainer}></AuthRoute>
+    </Switch>
 
   </div>
 );

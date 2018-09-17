@@ -40,8 +40,12 @@
 .dashboard-friend-detail-containers {
   display: flex;
   flex-direction: column;
-  width: 66%;
+  width: 50%;
+  // height: 100vh;
   margin-top: 50px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
 }
 
 .dashboard-link {
@@ -474,6 +478,10 @@
   width: 100%;
 }
 
+.session-submit-login:hover {
+  background-color: #15987d;
+}
+
 .login-main {
   margin-right: 10px;
   border-width: thin;
@@ -615,9 +623,10 @@ h6 {
   width: 275px;
   background-color: #EEEEEE;
   border-width: thin;
-  border: 2px solid lightgray;
+  border: 2px solid #999;
   position: fixed;
   top: 199px;
   left: 85%;
   transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
 }
