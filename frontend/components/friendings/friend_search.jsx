@@ -21,6 +21,7 @@ class Search extends React.Component {
     e.preventDefault();
     this.props.createFriend(this.state.search.email);
     e.target.reset();
+
   }
 
   renderErrors() {
@@ -55,6 +56,7 @@ class Search extends React.Component {
           </input>
           <div className="add-friend-errors">
             {this.renderErrors()}
+
           </div>
         </form>
       </div>

@@ -25,7 +25,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchFriends: () => dispatch(fetchFriends()),
-    deleteFriend: id => dispatch(deleteFriend(id)),
+    deleteFriend: id => dispatch(deleteFriend(id))
   };
 };
 
