@@ -21,6 +21,9 @@ import FriendDetailContainer from './friendings/friend_detail_container';
 // <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
 
 // <Redirect to="/" />
+
+// <ProtectedRoute path="/friendings/:id" component={FriendDetailContainer}></ProtectedRoute>
+
 const App = () => (
   <div>
     <Modal />
@@ -38,9 +41,14 @@ const App = () => (
       </div>
 
       <div className="dashboard-friend-detail-containers">
-        <ProtectedRoute path="/friendings/:id" component={FriendDetailContainer}></ProtectedRoute>
         <ProtectedRoute path="/" component={DashboardContainer}></ProtectedRoute>
       </div>
+
+      <div className="friend-balance-container">
+        <ProtectedRoute path="/friendings/:id" component={FriendDetailContainer}></ProtectedRoute>
+
+      </div>
+
     </div>
 
     <Switch>

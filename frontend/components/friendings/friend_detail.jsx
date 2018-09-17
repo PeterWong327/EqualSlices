@@ -16,10 +16,11 @@ class FriendDetail extends React.Component {
     }
 
     return (
-      <div className="friend-detail-name">
-        {this.props.friend.username}
 
-      </div>
+        <div className="friend-balance">
+          {this.props.friend.username} owes you $100
+        </div>
+
     )
   }
 }
