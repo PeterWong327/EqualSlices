@@ -20,6 +20,7 @@ class Search extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createFriend(this.state.search.email);
+    e.target.reset();
   }
 
   renderErrors() {
