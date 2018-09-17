@@ -31,7 +31,10 @@ class FriendIndex extends React.Component {
       <div className="left-sidebar">
         <ul className="friend-list-box">
           <div className="dashboard-link">
-          DASHBOARD
+            DASHBOARD
+          </div>
+          <div className="recent-activity">
+            RECENT ACTIVITY
           </div>
           <br></br>
           <br></br>
