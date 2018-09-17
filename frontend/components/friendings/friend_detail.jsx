@@ -7,13 +7,18 @@ class FriendDetail extends React.Component {
 
 
   componentDidMount() {
-    this.props.fetchFriend(this.props.match.params.friendId)
+    this.props.fetchFriend(this.props.match.params.id)
   }
 
   render() {
+    if (!this.props.friend) {
+      return <div></div>
+    }
+
     return (
       <div className="friend-detail-name">
-        s Dashboard
+        {this.props.friend.username}
+
       </div>
     )
   }

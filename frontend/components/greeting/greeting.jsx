@@ -9,7 +9,7 @@ import { openModal } from '../../actions/modal_actions';
 // <button className="signup-main" onClick={() => openModal('signup')}>Sign up</button>
 // <img className="splash-phone-img" src={window.images.splash}></img>
 
-
+          // &nbsp;or&nbsp;
 const Greeting = ({ currentUser, logout, openModal }) => {
 
   const sessionLinks = () => (
@@ -17,9 +17,9 @@ const Greeting = ({ currentUser, logout, openModal }) => {
       <nav className="login-signup">
           <h3>
             <button className="login-main" onClick={() => openModal('login')}>Log in</button>
-            &nbsp;or&nbsp;
+
             <Link className="signup-main" to="/signup">Sign up</Link>
-            &nbsp;or&nbsp;
+
             <button className="button-guest" onClick={() => dispatch(login({
               username: "Demo",
               email: "demo@equalslices.com" ,

@@ -30,11 +30,18 @@ const App = () => (
       </h1>
         <GreetingContainer />
     </header>
-    <ProtectedRoute path="/friendings" component={FriendDetailContainer}></ProtectedRoute>
-    <ProtectedRoute path="/" component={DashboardContainer}></ProtectedRoute>
-    <ProtectedRoute path="/" component={FriendIndexContainer}></ProtectedRoute>
-    <ProtectedRoute path="/" component={FriendSearchContainer}></ProtectedRoute>
+    <div className="container-app">
 
+      <div className="friend-list-container2">
+        <ProtectedRoute path="/" component={FriendIndexContainer}></ProtectedRoute>
+        <ProtectedRoute path="/" component={FriendSearchContainer}></ProtectedRoute>
+      </div>
+
+      <div className="dashboard-friend-detail-containers">
+        <ProtectedRoute path="/friendings/:id" component={FriendDetailContainer}></ProtectedRoute>
+        <ProtectedRoute path="/" component={DashboardContainer}></ProtectedRoute>
+      </div>
+    </div>
 <Switch>
 
   <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>

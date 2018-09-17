@@ -16,11 +16,13 @@
 
 
 
-
+.container-app {
+  display: flex;
+}
 
 ///////////////////////////////// Friend Detail ////////////////////////////
 .friend-detail-name {
-  margin-top: 10%;
+  // margin-top: 10%;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -35,6 +37,13 @@
 
 
 ///////////////////////////////// Dashboard ////////////////////////////
+.dashboard-friend-detail-containers {
+  display: flex;
+  flex-direction: column;
+  width: 66%;
+  margin-top: 50px;
+}
+
 .dashboard-link {
   justify-content: space-around;
   // display: flex;
@@ -51,14 +60,15 @@
 
 
 .dashboard-main {
-  margin-top: 10%;
+  // margin-top: 10%;
   background-color: lightgray;
   display: inline-flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  width: 50%;
-  margin-left: 300px;
+  // width: 800px;
+  width: 100%;
+  // margin-left: 300px;
 }
 
 .dashboard-header {
@@ -197,6 +207,12 @@
 // .left-sidebar, .signup-form {
 //   display: flex;
 // }
+.friend-list-container2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
 .recent-activity {
   justify-content: space-around;
   // display: flex;
@@ -212,7 +228,9 @@
 }
 
 .add-friend-form-container {
-  position: fixed;
+  // position: fixed;
+  // display: flex;
+  // flex-direction: column;
 }
 
  .left-sidebar, {
@@ -220,7 +238,7 @@
    // margin-top: 200px;
    background-color: white;
    color: #999999;
-   display: block;
+   // display: block;
    flex-wrap: wrap;
    // width: 23%;
    margin: 0;
@@ -345,6 +363,7 @@
    padding: 10px;
    border-radius: 4px;
    text-decoration: none;
+   margin-right: 10px;
  }
 
 .signup-main:hover {
@@ -355,6 +374,7 @@
  // }
 
  .login-signup {
+
    display: block;
    flex: right;
    color: white;
@@ -455,8 +475,10 @@
 }
 
 .login-main {
+  margin-right: 10px;
   border-width: thin;
-  border: 0.5px solid #b3b3b3;
+  // border: 0.5px solid #b3b3b3;
+  border: 0.5px solid lightgray;
   background-color: #1CCBA7;
   color: white;
   font-size: 16px;
@@ -534,6 +556,7 @@ h5 {
   padding: 5px;
   height: 50px;
   border: 0;
+  min-width: 600px;
 }
 
 h2, h4 {
@@ -588,13 +611,13 @@ h6 {
 }
 
 .modal-child {
-  height: 50%;
-  width: 25%;
+  height: 275px;
+  width: 275px;
   background-color: #EEEEEE;
   border-width: thin;
   border: 2px solid lightgray;
-  position: absolute;
-  top: 32.6%;
+  position: fixed;
+  top: 199px;
   left: 85%;
   transform: translate(-50%, -50%);
 }
