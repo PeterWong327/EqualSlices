@@ -103,6 +103,10 @@
   // width: 100%;
 }
 
+.dashboard-add-bill-btn:hover {
+  filter:brightness(90%);
+}
+
 .dashboard-settle-btn {
   background-color: #1CCBA7;
   color: white;
@@ -115,6 +119,10 @@
   // justify-content: space-around;
   // margin-left: 40px;
   // width: 100%;
+}
+
+.dashboard-settle-btn:hover {
+  filter:brightness(90%);
 }
 
 ///////////////////////////////// Dashboard ////////////////////////////

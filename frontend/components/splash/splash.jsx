@@ -10,7 +10,7 @@ const Splash = () => {
   const frontPage = () => (
     <div className="splash-elements">
       <div className="splash-intro-text">
-        <h2 className="splash-intro-header">Slice Expenses With Friends</h2>
+        <h2 className="splash-intro-header">Split Expenses With Friends</h2>
         <h4>Share bills and IOUs. Make sure everyone gets paid back.
           Totally free for web, iPhone, and Android.
         </h4>
