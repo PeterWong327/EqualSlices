@@ -49,6 +49,52 @@
 
 
 ///////////////////////////////// Dashboard ////////////////////////////
+.dashboard-balance-summary {
+  display: flex;
+  background-color: #EEEEEE;
+  justify-content: space-around;
+  border-top: 1px solid darkgray;
+}
+
+.dashboard-actual-total-balance {
+  color: green;
+}
+
+.dashboard-total-balance {
+  width: 175px;
+  display: inline-block;
+  // border-left: 1px solid darkgray;
+  text-align: center;
+  padding: 25px;
+  padding-bottom: 15px;
+}
+
+.dashboard-actual-you-owe {
+  color: red;
+}
+
+.dashboard-you-owe {
+  width: 175px;
+  border-left: 1px solid darkgray;
+  text-align: center;
+  padding: 25px;
+  padding-left: 45px;
+  padding-bottom: 15px;
+}
+
+.dashboard-actual-you-are-owed {
+  color: green;
+}
+
+.dashboard-you-are-owed {
+  width: 175px;
+  border-left: 1px solid darkgray;
+  text-align: center;
+  padding: 25px;
+  padding-bottom: 15px;
+}
+
+
 .dashboard-friend-detail-containers {
   display: flex;
   flex-direction: column;
@@ -78,7 +124,7 @@
 
 .dashboard-main {
   // margin-top: 10%;
-  background-color: lightgray;
+  background-color: #EEEEEE;
   display: inline-flex;
   justify-content: center;
   flex-direction: row;
@@ -91,7 +137,8 @@
 }
 
 .dashboard-header {
-  font-size: 24x !important;
+  font-size: 24px !important;
+  font-weight: bold;
 }
 
 .dashboard-add-bill-btn {
@@ -104,7 +151,7 @@
   margin: 12px;
   height: 37px;
   // width: 100%;
-  margin-left: 40%;
+  margin-left: 10%;
 }
 
 .dashboard-add-bill-btn:hover {
