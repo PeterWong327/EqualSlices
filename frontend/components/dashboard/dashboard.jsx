@@ -13,10 +13,17 @@ import { openModal } from '../../actions/modal_actions';
 const Dashboard = () => {
 
   const dashboardItems = () => (
-    <div className="dashboard-main">
-      <label className="dashboard-header">Dashboard</label>
-      <button className="dashboard-add-bill-btn">Add a bill</button>
-      <button className="dashboard-settle-btn">Settle up</button>
+    <div className="dashboard-items">
+      <div className="dashboard-main">
+        <label className="dashboard-header">Dashboard</label>
+        <button className="dashboard-add-bill-btn">Add a bill</button>
+        <button className="dashboard-settle-btn">Settle up</button>
+      </div>
+      <div className="dashboard-friend-transactions">
+        Transaction 1
+        <br></br>
+        Transaction 2
+      </div>
     </div>
   )
 

@@ -18,19 +18,10 @@ class FriendDetail extends React.Component {
     return (
 
         <div className="friend-balance">
+          <font color="gray">YOUR BALANCE</font>
+    
+          <br></br>
           {this.props.friend.username} owes you $100
-          The quick brown fox jumps over the lazy dogs.
-          The quick brown fox jumps over the lazy dogs.
-          The quick brown fox jumps over the lazy dogs.
-          The quick brown fox jumps over the lazy dogs.
-          The quick brown fox jumps over the lazy dogs.
-          The quick brown fox jumps over the lazy dogs.
-          The quick brown fox jumps over the lazy dogs.
-          The quick brown fox jumps over the lazy dogs.
-          The quick brown fox jumps over the lazy dogs.
-          The quick brown fox jumps over the lazy dogs.
-          The quick brown fox jumps over the lazy dogs.
-          The quick brown fox jumps over the lazy dogs.
           The quick brown fox jumps over the lazy dogs.
           The quick brown fox jumps over the lazy dogs.
           The quick brown fox jumps over the lazy dogs.

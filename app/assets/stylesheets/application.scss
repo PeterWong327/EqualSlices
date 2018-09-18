@@ -58,6 +58,7 @@
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  min-width: 450px;
 }
 
 .dashboard-link {
@@ -84,7 +85,9 @@
   align-items: center;
   // width: 800px;
   width: 100%;
+  min-width: 450px;
   // margin-left: 300px;
+  margin-top: 2px;
 }
 
 .dashboard-header {
@@ -101,6 +104,7 @@
   margin: 12px;
   height: 37px;
   // width: 100%;
+  margin-left: 40%;
 }
 
 .dashboard-add-bill-btn:hover {
@@ -117,12 +121,20 @@
   margin: 12px;
   height: 37px;
   // justify-content: space-around;
-  // margin-left: 40px;
+  // margin-left: 40%;
   // width: 100%;
 }
 
 .dashboard-settle-btn:hover {
   filter:brightness(90%);
+}
+
+.dashboard-friend-transactions {
+  background-color: orange;
+}
+
+.dashboard-items {
+  // display: inline-block;
 }
 
 ///////////////////////////////// Dashboard ////////////////////////////
