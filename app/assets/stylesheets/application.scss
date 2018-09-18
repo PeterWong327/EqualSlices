@@ -325,6 +325,10 @@
   font-size: 14px;
 }
 
+.add-friend-submit:hover {
+  filter:brightness(90%);
+}
+
 ////////////////////////////////// SIDEBAR /////////////////////////////
 
 
@@ -557,6 +561,10 @@
 
 .header-button {
   // margin-top: -10px;
+}
+
+.header-button:hover {
+  filter:brightness(90%);
 }
 
 
