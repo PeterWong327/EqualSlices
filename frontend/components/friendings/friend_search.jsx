@@ -9,6 +9,12 @@ class Search extends React.Component {
       search: { email: ""}
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    document.addEventListener("click", this.props.clearErrors)
+  }
+
+
+  cancelClearErrors(e) {
+    e.stopPropagation()
   }
 
   update(e) {
@@ -38,7 +44,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div className="add-friend-form-container">
+      <div className="add-friend-form-container" onClick={this.cancelClearErrors}>
         <form onSubmit={this.handleSubmit} className="add-friend-form-box">
           <label className="invite-friends">Invite Friends
             <br/>

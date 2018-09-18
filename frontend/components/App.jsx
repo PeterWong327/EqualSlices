@@ -11,7 +11,7 @@ import Modal from './modal/modal';
 import FriendIndexContainer from './friendings/friend_index_container';
 import FriendSearchContainer from './friendings/friend_search_container';
 import SplashContainer from './splash/splash';
-import DashboardContainer from './dashboard/dashboard';
+import DashboardContainer from './dashboard/dashboard_container';
 import FriendDetailContainer from './friendings/friend_detail_container';
 
 // <AuthRoute path="/" component={Splash}></AuthRoute>
@@ -35,6 +35,7 @@ const App = () => (
     </header>
 
     <div className="container-app">
+
       <div className="friend-list-container2">
         <ProtectedRoute path="/" component={FriendIndexContainer}></ProtectedRoute>
         <ProtectedRoute path="/" component={FriendSearchContainer}></ProtectedRoute>
@@ -46,7 +47,6 @@ const App = () => (
 
       <div className="friend-balance-container">
         <ProtectedRoute path="/friendings/:id" component={FriendDetailContainer}></ProtectedRoute>
-
       </div>
 
     </div>
