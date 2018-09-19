@@ -1,22 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import SessionForm from '../session_form/session_form';
-// import { login } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 import DashboardContainer from './dashboard_container';
 
-// <Link className="login-main" to="/login">Log in</Link>
-// &nbsp;or&nbsp;
-// <button className="signup-main" onClick={() => openModal('signup')}>Sign up</button>
-// <img className="splash-phone-img" src={window.images.splash}></img>
-
-// const Dashboard1 = () => {
-//
-//   const dashboardItems = () => (
-//   )
-//
-//   return dashboardItems();
-// };
 class Dashboard extends React.Component {
   constructor(props){
     super(props);
@@ -27,6 +13,10 @@ class Dashboard extends React.Component {
   }
 
   render() {
+    if (!this.props.friend) {
+      return <div></div>
+    }
+
     const dashboard_end = "'s Dashboard";
 
     return (
@@ -66,7 +56,7 @@ class Dashboard extends React.Component {
         <div className="dashboard-friend-transactions">
           Transaction 1
           <br></br>
-          {this.props.currentUser.username} owe $50
+          {this.props.friend.username} owes you $100
           <br></br>
           Transaction 2
         </div>

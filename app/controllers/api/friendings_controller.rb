@@ -30,7 +30,11 @@ class Api::FriendingsController < ApplicationController
 
   def show
     #find by id of Friending relationship
-    @friending = Friending.find(params[:id])
+    if !Friending.find_by(params[:friendee_id]).nil?
+      @friending = Friending.find_by(params[:friendee_id])
+    elsif !Friending.find_by(params[:friender_id]).nil?
+      @friending = Friending.find_by(params[:friender_id])
+    end
     render "api/friendings/show"
   end
 

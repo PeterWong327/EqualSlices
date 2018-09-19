@@ -1,18 +1,19 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
 import Dashboard from './dashboard';
-import {clearErrors} from '../../actions/session_actions';
 import { fetchFriend } from '../../actions/friending_actions';
 
-// currentUser: users[session.id]
+// console.log(ownProps.match.params);
+// console.log("users:", state.entities.users);
+
 const mapStateToProps = (state, ownProps) => {
   const currentUserId = state.session.id;
   const currentUser = state.entities.users[currentUserId];
   const friend = state.entities.users[ownProps.match.params.id];
 
+
   return {
-    friend,
-    currentUser
+    currentUser,
+    friend
   };
 };
 
