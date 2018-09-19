@@ -35,7 +35,7 @@ class FriendIndex extends React.Component {
             <Link to="/" className ="dashboard-link">DASHBOARD </Link>
 
           <br></br>
-          <br></br>
+  
           <div className="recent-activity">
             RECENT ACTIVITY
           </div>

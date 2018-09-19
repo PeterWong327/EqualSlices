@@ -110,11 +110,13 @@
 .dashboard-link {
   justify-content: space-around;
   // display: flex;
-  color: #CDCCCC;
-  background-color: #f6f6f6;
+  color: #999999;
+  // background-color: #f6f6f6;
   font-size: 14px;
   width: 100px;
   text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .dashboard-link:hover {
@@ -300,9 +302,11 @@
 .recent-activity {
   justify-content: space-around;
   // display: flex;
-  color: #CDCCCC;
-  background-color: #f6f6f6;
+  color: #999999;
+  // background-color: #f6f6f6;
   font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   // width: 75%;
 }
 
