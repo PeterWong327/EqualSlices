@@ -3,9 +3,12 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import AddBillFormContainer from '../bills/add_bill_form_container';
 import {clearErrors} from '../../actions/session_actions';
 
 function Modal({modal, closeModal}) {
+
+
   if (!modal) {
     return null;
   }
@@ -17,16 +20,35 @@ function Modal({modal, closeModal}) {
     case 'signup':
       component = <SignupFormContainer />;
       break;
+    case 'addBill':
+      component = <AddBillFormContainer />;
+      break;
     default:
       return null;
   }
-  return (
-    <div className="modal-background" onClick={closeModal}>
-      <div className="modal-child" onClick={e => e.stopPropagation()}>
-        { component }
+
+  if (modal === 'login') {
+    return (
+      <div className="login-modal-background" onClick={closeModal}>
+        <div className="login-modal-child" onClick={e => e.stopPropagation()}>
+          { component }
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  if (modal === 'addBill') {
+    return (
+      <div className="addBill-modal-background" onClick={closeModal}>
+        <div className="addBill-modal-child" onClick={e => e.stopPropagation()}>
+          { component }
+        </div>
+      </div>
+    );
+  }
+
+
+
 }
 
 const mapStateToProps = state => {

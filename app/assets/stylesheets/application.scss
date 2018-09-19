@@ -701,7 +701,7 @@ h6 {
   font-size: 48px;
 }
 
-.modal-background {
+.login-modal-background {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -711,7 +711,7 @@ h6 {
   z-index: 10;
 }
 
-.modal-child {
+.login-modal-child {
   height: 275px;
   width: 275px;
   background-color: #EEEEEE;
@@ -720,6 +720,36 @@ h6 {
   position: fixed;
   top: 199px;
   left: 85%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+}
+.addBill-modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 10;
+}
+
+.addBill-modal-child {
+  // background: #fff;
+  // width: 350px;
+  border: 1px solid #999;
+  // box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: 275px;
+  width: 350px;
+  background-color: #fff;
+  border-width: thin;
+  border: 2px solid #999;
+  position: fixed;
+  top: 315px;
+  left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
 }
