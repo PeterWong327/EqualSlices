@@ -2,6 +2,7 @@ import React from 'react';
 import FriendIndexItem from './friend_index_item';
 import FriendIndexContainer from './friend_index_container';
 import { openModal } from '../../actions/modal_actions';
+import { Link } from 'react-router-dom';
 
 // deleteFriend={this.props.deleteFriend}
 
@@ -30,13 +31,15 @@ class FriendIndex extends React.Component {
     return (
       <div className="left-sidebar">
         <ul className="friend-list-box">
-          <div className="dashboard-link">
-            DASHBOARD
-          </div>
+
+            <Link to="/" className ="dashboard-link">DASHBOARD </Link>
+
+          <br></br>
+          <br></br>
           <div className="recent-activity">
             RECENT ACTIVITY
           </div>
-          <br></br>
+
           <br></br>
           <div className="friend-list-header">
           FRIENDS
