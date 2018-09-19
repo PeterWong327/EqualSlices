@@ -17,12 +17,12 @@ class Dashboard extends React.Component {
       return <div></div>
     }
 
-    const dashboard_end = "'s Dashboard";
+    const dashboard_end = "'s Bills";
 
     return (
       <div className="dashboard-items">
         <div className="dashboard-main">
-          <label className="dashboard-header">{this.props.currentUser.username}{dashboard_end}</label>
+          <label className="dashboard-header">{this.props.friend.username}{dashboard_end}</label>
           <button className="dashboard-add-bill-btn">Add a bill</button>
           <button className="dashboard-settle-btn">Settle up</button>
         </div>
