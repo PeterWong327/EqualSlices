@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
+import React from 'react';
 import Dashboard from './dashboard';
 import { fetchFriend } from '../../actions/friending_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 // console.log(ownProps.match.params);
 // console.log("users:", state.entities.users);
@@ -19,8 +21,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchFriend: id => dispatch(fetchFriend(id)),
-
+    openModal: modal => dispatch(openModal(modal)),
+    closeModal: () => dispatch(closeModal()),
+    fetchFriend: id => dispatch(fetchFriend(id))
   };
 };
 

@@ -723,6 +723,26 @@ h6 {
   transform: translate(-50%, -50%);
   box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
 }
+
+///////////////////////////////////////// Bills ////////////////////////
+
+.add-bill-btn {
+  background-color: #FF5600;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 0.5px solid #15987D;
+  margin: 12px;
+  height: 37px;
+  // width: 100%;
+  margin-left: 10%;
+}
+
+.add-bill-btn:hover {
+  filter:brightness(90%);
+}
+
 .addBill-modal-background {
   position: fixed;
   top: 0;

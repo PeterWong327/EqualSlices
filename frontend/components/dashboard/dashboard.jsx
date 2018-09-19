@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { openModal } from '../../actions/modal_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 import DashboardContainer from './dashboard_container';
+
 
 class Dashboard extends React.Component {
   constructor(props){
@@ -10,6 +11,12 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     this.props.fetchFriend(this.props.match.params.id)
+  }
+
+  openModal(field) {
+    return(e) => {
+      this.props.openModal(field);
+    };
   }
 
   render() {
@@ -23,7 +30,7 @@ class Dashboard extends React.Component {
       <div className="dashboard-items">
         <div className="dashboard-main">
           <label className="dashboard-header">{this.props.friend.username}{dashboard_end}</label>
-          <button className="dashboard-add-bill-btn">Add a bill</button>
+          <button className="dashboard-add-bill-btn" onClick={() => this.props.openModal('addBill')}>Add a bill</button>
           <button className="dashboard-settle-btn">Settle up</button>
         </div>
 

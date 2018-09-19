@@ -25,6 +25,7 @@ import AddBillFormContainer from './bills/add_bill_form_container';
 
 // <ProtectedRoute path="/friendings/:id" component={FriendDetailContainer}></ProtectedRoute>
 
+// <ProtectedRoute path="/friendings" component={AddBillFormContainer}></ProtectedRoute>
 const App = () => (
   <div>
     <Modal />
@@ -46,7 +47,6 @@ const App = () => (
       </div>
 
       <div className="dashboard-friend-detail-containers">
-        <ProtectedRoute path="/friendings" component={AddBillFormContainer}></ProtectedRoute>
         <ProtectedRoute path="/friendings/:id" component={DashboardContainer}></ProtectedRoute>
       </div>
 
