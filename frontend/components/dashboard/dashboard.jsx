@@ -31,7 +31,7 @@ class Dashboard extends React.Component {
         <div className="dashboard-main">
           <label className="dashboard-header">{this.props.friend.username}{dashboard_end}</label>
           <button className="dashboard-add-bill-btn" onClick={() => this.props.openModal('addBill')}>Add a bill</button>
-          <button className="dashboard-settle-btn">Settle up</button>
+          <button className="dashboard-settle-btn" onClick={() => this.props.openModal('settleUp')}>Settle up</button>
         </div>
 
         <div className="dashboard-balance-summary">

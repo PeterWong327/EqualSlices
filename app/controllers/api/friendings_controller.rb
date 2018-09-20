@@ -25,7 +25,7 @@ class Api::FriendingsController < ApplicationController
       end
 
     else
-      render json: ["Please enter a valid email address."],
+      render json: ["Email address is not registered with EqualSlices."],
         status: 401
     end
   end

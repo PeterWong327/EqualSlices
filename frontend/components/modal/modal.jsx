@@ -23,6 +23,9 @@ function Modal({modal, closeModal}) {
     case 'addBill':
       component = <AddBillFormContainer />;
       break;
+    case 'settleUp':
+      component = <AddBillFormContainer />;
+      break;
     default:
       return null;
   }
@@ -38,6 +41,16 @@ function Modal({modal, closeModal}) {
   }
 
   if (modal === 'addBill') {
+    return (
+      <div className="addBill-modal-background" onClick={closeModal}>
+        <div className="addBill-modal-child" onClick={e => e.stopPropagation()}>
+          { component }
+        </div>
+      </div>
+    );
+  }
+
+  if (modal === 'settleUp') {
     return (
       <div className="addBill-modal-background" onClick={closeModal}>
         <div className="addBill-modal-child" onClick={e => e.stopPropagation()}>
