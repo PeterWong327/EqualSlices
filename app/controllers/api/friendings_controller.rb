@@ -4,14 +4,16 @@ class Api::FriendingsController < ApplicationController
   def index
     @friendings = Friending.where(friender_id: current_user.id)
                             .or(Friending.where(friendee_id: current_user.id))
+
     render "api/friendings/index"
   end
 
 # 1. Checks if a user has the email inputted.
 # 2. If user exists, try to save. If saves, renders friends.
   def create
+
     friendee = User.where(email: params[:search][:email]).first
-    if friendee
+    if friendee && Friending.where(friendee_id: current_user.id, friender_id: friendee.id).empty? && Friending.where(friendee_id: friendee.id , friender_id: current_user.id).empty?
       @friending = Friending.new()
       @friending.friender_id = current_user.id
       @friending.friendee_id = friendee.id
@@ -30,11 +32,18 @@ class Api::FriendingsController < ApplicationController
 
   def show
     #find by id of Friending relationship
-    if !Friending.find_by(params[:friendee_id]).nil?
-      @friending = Friending.find_by(params[:friendee_id])
-    elsif !Friending.find_by(params[:friender_id]).nil?
-      @friending = Friending.find_by(params[:friender_id])
+
+    # @friending = Friending.where(friendee_id: current_user.id, friender_id: params[:id])[0]
+    #
+    # Friending.where(friendee_id: params[:id] , friender_id: current_user.id)[0] unless @friending
+
+    if Friending.find_by(friendee_id:params[:id],friender_id:current_user.id)
+      @friending = Friending.find_by(friendee_id:params[:id],friender_id:current_user.id)
+    elsif Friending.find_by(friendee_id:current_user.id,friender_id:params[:id])
+      @friending = Friending.find_by(friendee_id:current_user.id,friender_id:params[:id])
     end
+
+    # @friending = Friending.find(params[:id])
     render "api/friendings/show"
   end
 

@@ -10,6 +10,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 const mapStateToProps = state => {
   const currId = state.session.id;
   const friends = Object.values(state.entities.friendings).map(friending => {
+    console.log(friending);
     if (currId !== friending.friendee_id) {
       const id = friending.friendee_id;
       return state.entities.users[id];

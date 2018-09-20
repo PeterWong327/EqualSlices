@@ -6,6 +6,6 @@ end
 
 json.friending do
   json.set! @friending.id do
-    json.extract! @friending, :friender_id, :friendee_id
+    json.extract! @friending, :id,:friender_id, :friendee_id
   end
 end

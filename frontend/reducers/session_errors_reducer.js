@@ -3,6 +3,8 @@ import { RECEIVE_SESSION_ERRORS,
         CLEAR_ERRORS
 } from '../actions/session_actions';
 
+import { RECEIVE_FRIEND} from '../actions/friending_actions';
+
 export default (state = [], action) => {
   Object.freeze(state);
   switch(action.type) {
