@@ -23,7 +23,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
             <button className="button-guest" onClick={() => dispatch(login({
               username: "Demo",
               email: "demo@equalslices.com" ,
-              password: "password"}))}>Log in as a guest</button>
+              password: "password"}))}>Try a demo</button>
           </h3>
         <br/>
         <br/>
@@ -40,7 +40,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
 
   const personalGreeting = () => (
     <hgroup className="header-group">
-      <h2 className="header-name">Logged in as {currentUser.username}</h2>
+      <h2 className="header-name">{currentUser.username}</h2>
       <br/>
       <button className="header-button" onClick={logout}>Log out</button>
     </hgroup>

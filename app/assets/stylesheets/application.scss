@@ -342,22 +342,24 @@
  }
 
  .add-friend-form-box {
-   // margin-top: -300px;
    background-color: white;
    color: #999999;
    display: flex;
+   align-items: center;
    flex-direction: column;
    flex-wrap: wrap;
-   width: 160px;
    min-height: 100px;
    border: 1px solid #ccc;
-   width: 180px;
    margin-left: 10px;
+   width: 181px;
+   height: 180px;
+   border-bottom-left-radius: 30px;
+   border-bottom-right-radius: 30px;
  }
 
 .invite-friends {
-  text-align: left;
-  height: 30px;
+  text-align: center;
+  height: 29px;
   width: 181px;
   background-color: #00D2A8;
   color: white;
@@ -365,29 +367,32 @@
   // border-color: black;
   border-width: thin;
   border: 0.5px solid #15987D;
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+
 
   .add-friend-email-input {
     display: inline-block;
-    margin-left: 5px;
-    // margin-right: 1px;
+    text-align: center;
+    margin-left: 5%;
     width: 155px;
     font-size: 15px;
     display: block;
     height: 25px;
     background-color: white;
+    box-shadow: 0px 1px 0px 2px lightgray;
   }
 }
 
 .add-friend-submit {
-  background-color: #EEEEEE;
+  background-color: #2C83CA;
   border: 0.5px solid lightgray;
   width: 50%;
   height: 25px;
   border-radius: 4px;
-  margin-top: 45px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-top: 31%;
   font-size: 14px;
+  color: white;
 }
 
 .add-friend-submit:hover {
@@ -447,20 +452,36 @@
 
  ////////////////////////////////// SIGN UP ///////////////////////////
  .signup-main {
-   border-width: thin;
-   border: 5px;
-   background-color: #FF5600;
-   box-sizing: border-box;
-   color: white;
-   font-size: 16px;
-   padding: 10px;
-   border-radius: 4px;
-   text-decoration: none;
+   // border-width: thin;
+   // border: 5px;
+   // background-color: #FF5600;
+   // box-sizing: border-box;
+   // color: white;
+   // font-size: 16px;
+   // padding: 10px;
+   // border-radius: 4px;
+   // text-decoration: none;
+   // margin-right: 10px;
+
    margin-right: 10px;
+border-width: thin;
+border: 0.5px solid lightgray;
+background-color: #1CCBA7;
+color: white;
+font-size: 16px;
+padding: 10px;
+border-radius: 4px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-left-radius: 4px;
+text-decoration: none;
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
  }
 
 .signup-main:hover {
   background-color: #EF4600;
+  border: 1px solid white;
 }
  // .signup-main:hover {
  //     background-color: #EF4600;
@@ -545,14 +566,15 @@
 
 .button-guest {
   font-size: 16px;
-  background-color: #808080;
+  background-color: #1ccba7;
   color: white;
-  border-radius: 4px;
+  // border-radius: 4px;
+  border: none;
   padding: 8px;
 }
 
 .button-guest:hover {
-  background-color: #707070;
+  border-bottom: 3px solid white;
 }
 
 .session-submit-login {
@@ -591,6 +613,7 @@
 
 .login-main:hover {
   background-color: #0CBB97;
+  border: 1px solid white;
 }
 
 .login-errors {
@@ -620,14 +643,22 @@
 .header-group {
   display: block;
   flex: right;
-  margin-right: 10px;
+  margin-right: 40px;
+  width: 200px;
+  text-align: center;
   // height: 30px;
 }
 
 .header-button {
   // margin-top: -10px;
-  border-radius: 4px;
-  padding: 3px;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  transition: 0.5s;
+  background-color: lightgray;
+  // padding: 3px;
+  margin-left: 0%;
+  font-family: Lato, sans-serif;
+  font-weight: bold;
 }
 
 .header-button:hover {
