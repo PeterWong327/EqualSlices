@@ -10,8 +10,11 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchFriend(this.props.match.params.id)
+    this.props.fetchFriend(this.props.match.params.id).then(
+      () => this.props.fetchBills().then(() => this.setState({}))
+    )
   }
+
 
   openModal(field) {
     return(e) => {
@@ -61,9 +64,12 @@ class Dashboard extends React.Component {
         </div>
 
         <div className="dashboard-friend-transactions">
-          Transaction 1
+          <strong>Transaction 1</strong>
           <br></br>
-          {this.props.friend.username} owes you $100
+          <strong>Description:</strong> Dinner
+          <br></br>
+          <strong>Friend:</strong> {this.props.friend.username} owes you <strong>Bill Amount:</strong> $100
+          <br></br>
           <br></br>
           Transaction 2
         </div>

@@ -3,22 +3,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import AddBillForm from './add_bill_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
+import { createBill, fetchBills } from '../../actions/bill_actions';
+import { fetchFriend } from '../../actions/friending_actions';
 
-// otherForm: (
-//   <button onClick={() => dispatch(openModal('addBill'))}>
-//     Add Bill
-//   </button>
-// ),
-const mapStateToProps = ({ errors }) => {
+// console.log(ownProps.match.params);
+
+// const friend = state.entities.users[ownProps.match.params.id];
+const mapStateToProps = (state) => {
+  const currentUserId = state.session.id;
+  const currentUser = state.entities.users[currentUserId];
+
+
   return {
-    errors: errors.session,
-  }
-}
+    currentUser
+  };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
+    fetchBills: () => dispatch(fetchBills()),
+    createBill: bill => dispatch(createBill(bill)),
     openModal: modal => dispatch(openModal(modal)),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    fetchFriend: id => dispatch(fetchFriend(id))
   };
 };
 

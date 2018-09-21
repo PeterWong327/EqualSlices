@@ -2,9 +2,10 @@ class Api::BillsController < ApplicationController
   before_action :require_login
 
   def create
-    biller_id = current_user.id
+    # biller_id = current_user.id
     #Bill.new(bill_params) after putting recipient id in bills table
     @bill = Bill.new(bill_params)
+    @bill.biller_id = current_user.id
     # @bill = Bill.make_bill(bill_params, recipient_id)
     if @bill.save
       render "api/bills/show"
@@ -20,6 +21,10 @@ class Api::BillsController < ApplicationController
 
   def index
     @bills = Bill.where(biller_id: current_user.id)
+    @bills += Bill.where(bill_recipient_id: current_user.id)
+
+    @users = User.where(id: @bills.map { |bill| bill.id}.uniq )
+
     render "api/bills/index"
   end
 

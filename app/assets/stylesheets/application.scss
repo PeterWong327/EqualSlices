@@ -294,6 +294,11 @@
 // .left-sidebar, .signup-form {
 //   display: flex;
 // }
+
+.friend-list-names {
+  font-family: sans-serif;
+}
+
 .friend-list-container2 {
   display: flex;
   flex-direction: column;
@@ -324,18 +329,13 @@
 
  .left-sidebar, {
    margin-top: -50px;
-   // margin-top: 200px;
    background-color: white;
    color: #999999;
-   // display: block;
    flex-wrap: wrap;
-   // width: 23%;
    margin: 0;
    padding: 0;
    width: 200px;
    min-height:200px;
-   // padding: 20px;
-   // padding-right: 19px;
    border-right: 1px solid #ccc;
    box-shadow: 1px -2px 5px -2px #888;
    height: auto;
@@ -807,3 +807,63 @@ h6 {
   transform: translate(-50%, -50%);
   box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
 }
+
+.add-bill-amount {
+
+}
+
+.add-bill-amount-input {
+
+}
+
+.add-bill-billee {
+
+}
+
+.add-bill-billee-input {
+
+}
+//////////////////////////////////////  Bills //////////////////////////
+
+
+//////////////////////////////////////  Settle Bills //////////////////////////
+
+.settle-bill-form-container {
+  display: inline-block;
+}
+
+.settle-bill-prompt {
+
+}
+
+.payment-btns {
+  // display: block;
+  background-color: blue;
+}
+
+.cash-btn {
+
+}
+
+.square-cash-btn {
+
+}
+
+.venmo-btn {
+
+}
+
+.settle-bill-cancel-save{
+ margin-top: 80%;
+}
+
+.settle-bill-cancel-btn {
+
+}
+
+
+.settle-bill-save-btn {
+  background-color: #5BC5A7;
+  color: white;
+}
+//////////////////////////////////////  Settle Bills //////////////////////////

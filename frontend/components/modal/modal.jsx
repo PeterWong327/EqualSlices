@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import AddBillFormContainer from '../bills/add_bill_form_container';
+import SettleBillContainer from '../bills/settle_bill_container';
 import {clearErrors} from '../../actions/session_actions';
 
 function Modal({modal, closeModal}) {
@@ -24,7 +25,7 @@ function Modal({modal, closeModal}) {
       component = <AddBillFormContainer />;
       break;
     case 'settleUp':
-      component = <AddBillFormContainer />;
+      component = <SettleBillContainer />;
       break;
     default:
       return null;

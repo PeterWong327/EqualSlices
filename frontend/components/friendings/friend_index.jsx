@@ -44,7 +44,9 @@ class FriendIndex extends React.Component {
           <div className="friend-list-header">
           FRIENDS
           </div>
+          <div className="friend-list-names">
             {friends}
+          </div>
         </ul>
       </div>
     )

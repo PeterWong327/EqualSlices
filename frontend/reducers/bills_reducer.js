@@ -9,9 +9,9 @@ const billsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_ALL_BILLS:
-      return merge({}, state, action.bills);
+      return merge({}, state, action.bills.bills);
     case RECEIVE_BILL:
-      return merge({}, state, {[action.bills.id]: action.bills});
+      return merge({}, state, {[action.bill.id]: action.bill});
     case REMOVE_BILL:
       let newState = merge({}, state);
       delete newState[action.billId];

@@ -6,6 +6,8 @@ import {
   RECEIVE_FRIEND
 } from '../actions/friending_actions';
 
+import { RECEIVE_ALL_BILLS } from  '../actions/bill_actions';
+
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
 
@@ -16,6 +18,8 @@ const usersReducer = (state = {}, action) => {
       return merge({}, state, action.payload.users);
     case RECEIVE_FRIEND:
       return merge({}, state, action.payload.users);
+    case RECEIVE_ALL_BILLS:
+      return merge({}, state, action.bills.users);
     default:
       return state;
   }
