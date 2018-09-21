@@ -40,18 +40,33 @@ class Dashboard extends React.Component {
     // debugger;
     const results = keyId.map(key => {
         if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) || (this.props.friend.id === this.props.bills[key]["biller_id"])) {
-          return (
-            <div key={key}>
-              <strong>Date: {this.props.bills[key]["date"]}</strong>
-              <br></br>
-              <strong>Description:</strong> {this.props.bills[key]["description"]}
+          if (this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) {
+            return (
+              <div key={key}>
+                <strong>Date: {this.props.bills[key]["date"]}</strong>
                 <br></br>
-                <strong>Friend:</strong> {this.props.friend.username} owes you
-                  <strong>Bill Amount: $</strong>{this.props.bills[key]["balance"]}
-                    <br></br>
-                    <br></br>
-                  </div>
-                )
+                <strong>Description:</strong> {this.props.bills[key]["description"]}
+                  <br></br>
+                  <strong>Friend:</strong> {this.props.friend.username} owes you
+                    <strong>Bill Amount: $</strong>{this.props.bills[key]["balance"]}
+                      <br></br>
+                      <br></br>
+                    </div>
+                  )
+          } else if (this.props.friend.id === this.props.bills[key]["biller_id"]) {
+            return (
+              <div key={key}>
+                <strong>Date: {this.props.bills[key]["date"]}</strong>
+                <br></br>
+                <strong>Description:</strong> {this.props.bills[key]["description"]}
+                  <br></br>
+                  <strong>Friend:</strong> You owe {this.props.friend.username}
+                    <strong>Bill Amount: $</strong>{this.props.bills[key]["balance"]}
+                      <br></br>
+                      <br></br>
+                    </div>
+                  )
+          }
         }
 
     })
