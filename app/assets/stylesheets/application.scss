@@ -767,10 +767,18 @@ h6 {
   padding: 10px;
   border-radius: 4px;
   border: 0.5px solid #15987D;
-  margin: 12px;
+  margin: 5px;
   height: 37px;
   // width: 100%;
-  margin-left: 10%;
+  // margin-left: 75%;
+}
+
+.add-bill-cancel-btn {
+  margin-top: 15px;
+}
+
+.add-bill-cancel-btn:hover {
+  filter:brightness(90%);
 }
 
 .add-bill-btn:hover {
@@ -795,25 +803,31 @@ h6 {
   overflow: hidden;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border-radius: 5px;
-  height: 275px;
+  border-radius: 10px;
+  height: 300px;
   width: 350px;
   background-color: #fff;
   border-width: thin;
-  border: 2px solid #999;
+  border: 1px solid black;
+  // border: 2px solid #999;
   position: fixed;
   top: 315px;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+  // padding: 10px;
+  padding-top: 0px;
 }
 
 .add-bill-amount {
-
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 25px;
 }
 
 .add-bill-amount-input {
-
+  margin-left: none;
+  max-width: 20%;
 }
 
 .add-bill-billee {
@@ -821,7 +835,54 @@ h6 {
 }
 
 .add-bill-billee-input {
+  margin-left: 20px;
+  max-width: 35%;
+}
 
+.add-bill-date-input {
+  margin-left: 20px;
+  height: 25px;
+  font-size: 18px;
+  color: lightgray;
+  border-radius: 5px;
+}
+
+.add-bill-header {
+  width: 100%;
+  background-color: #5BCCA8;
+  color: white;
+  font-size: 20px;
+  height: 40px;
+  font-family: Lato, sans-serif;
+  text-align: center;
+  line-height: 40px;
+}
+
+.add-bill-x-btn {
+  margin-left: 92%;
+  margin-top: -12%;
+  max-width: 10px;
+  height: 40px;
+  color: white;
+  /* font-weight: bold; */
+  font-family: Lato;
+  font-size: 30px;
+}
+
+
+.add-bill-modal-btns {
+  display: inline-flex;
+  flex-direction: right;
+  margin-left: 60%;
+}
+
+input[type="text1"] {
+  width: 75%;
+  height: 25px;
+  border: none;
+  border-bottom: 2px dotted lightgray;
+  margin-left: 20px;
+  font-size: 30px;
 }
 //////////////////////////////////////  Bills //////////////////////////
 
