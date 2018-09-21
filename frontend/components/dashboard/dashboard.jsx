@@ -15,6 +15,11 @@ class Dashboard extends React.Component {
     )
   }
 
+  componentDidUpdate(prevProps) {
+    if (Object.keys(this.props.bills).length !== Object.keys(prevProps.bills).length) {
+      this.props.fetchBills().then(this.props.closeModal);
+    }
+  }
 
   openModal(field) {
     return(e) => {
@@ -30,22 +35,25 @@ class Dashboard extends React.Component {
 
     const dashboard_end = "'s Bills";
 
-
     const keyId = Object.keys(this.props.bills);
 
+    // debugger;
     const results = keyId.map(key => {
         if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) || (this.props.friend.id === this.props.bills[key]["biller_id"])) {
           return (
             <div key={key}>
-              <strong>Transaction {key}</strong>
+              <strong>Date: {this.props.bills[key]["date"]}</strong>
               <br></br>
               <strong>Description:</strong> {this.props.bills[key]["description"]}
                 <br></br>
                 <strong>Friend:</strong> {this.props.friend.username} owes you
                   <strong>Bill Amount: $</strong>{this.props.bills[key]["balance"]}
+                    <br></br>
+                    <br></br>
                   </div>
                 )
-        };
+        }
+
     })
 
     return (

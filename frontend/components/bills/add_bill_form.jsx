@@ -40,6 +40,7 @@ class AddBillForm extends React.Component {
     };
   }
 
+
   update(field) {
     return (e) => {
       this.state.bill[field]=e.currentTarget.value;
@@ -64,24 +65,7 @@ class AddBillForm extends React.Component {
 
           <div onClick={this.props.closeModal} className="add-bill-x-btn">x</div>
 
-<br></br>
-          <label className="add-bill-amount">$
-            <input
-              className="add-bill-amount-input"
-              type="text1"
-              placeholder="0.00"
-              value={this.state.bill.amount}
-              onChange={this.update('balance')}
-              />
-          </label>
-
           <br></br>
-          <br></br>
-
-
-          <br></br>
-          <br></br>
-
             <label className="add-bill-description">
               <input
                 className="add-bill-description-input"
@@ -89,6 +73,19 @@ class AddBillForm extends React.Component {
                 placeholder="Enter a description"
                 value={this.state.bill.description}
                 onChange={this.update('description')}
+                />
+            </label>
+
+          <br></br>
+          <br></br>
+
+            <label className="add-bill-amount">$
+              <input
+                className="add-bill-amount-input"
+                type="text1"
+                placeholder="0.00"
+                value={this.state.bill.amount}
+                onChange={this.update('balance')}
                 />
             </label>
 
