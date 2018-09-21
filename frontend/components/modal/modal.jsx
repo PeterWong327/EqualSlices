@@ -9,12 +9,33 @@ import {clearErrors} from '../../actions/session_actions';
 
 function Modal({modal, closeModal}) {
 
+  console.log(modal);
 
+  // if (!modal) {
+  //   return null;
+  // }
+  // let component;
+  // switch (modal) {
+  //   case 'login':
+  //     component = <LoginFormContainer />;
+  //     break;
+  //   case 'signup':
+  //     component = <SignupFormContainer />;
+  //     break;
+  //   case 'addBill':
+  //     component = <AddBillFormContainer test="helloooooooooo"/>;
+  //     break;
+  //   case 'settleUp':
+  //     component = <SettleBillContainer />;
+  //     break;
+  //   default:
+  //     return null;
+  // }
   if (!modal) {
     return null;
   }
   let component;
-  switch (modal) {
+  switch (modal.type) {
     case 'login':
       component = <LoginFormContainer />;
       break;
@@ -22,7 +43,7 @@ function Modal({modal, closeModal}) {
       component = <SignupFormContainer />;
       break;
     case 'addBill':
-      component = <AddBillFormContainer />;
+      component = <AddBillFormContainer test="helloooooooooo"/>;
       break;
     case 'settleUp':
       component = <SettleBillContainer />;
@@ -31,7 +52,7 @@ function Modal({modal, closeModal}) {
       return null;
   }
 
-  if (modal === 'login') {
+  if (modal.type === 'login') {
     return (
       <div className="login-modal-background" onClick={closeModal}>
         <div className="login-modal-child" onClick={e => e.stopPropagation()}>
@@ -41,7 +62,7 @@ function Modal({modal, closeModal}) {
     );
   }
 
-  if (modal === 'addBill') {
+  if (modal.type === 'addBill') {
     return (
       <div className="addBill-modal-background" onClick={closeModal}>
         <div className="addBill-modal-child" onClick={e => e.stopPropagation()}>
@@ -51,7 +72,7 @@ function Modal({modal, closeModal}) {
     );
   }
 
-  if (modal === 'settleUp') {
+  if (modal.type === 'settleUp') {
     return (
       <div className="addBill-modal-background" onClick={closeModal}>
         <div className="addBill-modal-child" onClick={e => e.stopPropagation()}>

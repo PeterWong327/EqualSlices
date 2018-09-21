@@ -16,7 +16,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     <div>
       <nav className="login-signup">
           <h3>
-            <button className="login-main" onClick={() => openModal('login')}>Log in</button>
+            <button className="login-main" onClick={() => openModal({type: 'login'})}>Log in</button>
 
             <Link className="signup-main" to="/signup">Sign up</Link>
 

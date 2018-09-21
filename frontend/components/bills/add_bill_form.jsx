@@ -1,6 +1,18 @@
 import React from 'react';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
+// <label className="add-bill-billee">
+//   <input
+//     className="add-bill-billee-input"
+//     type="text1"
+//     placeholder="Friend ID"
+//     value={this.state.bill.bill_receipient_id}
+//     onChange={this.update('bill_recipient_id')}
+//     />
+// </label>
+
+
+
 // componentDidMount() {
 //   this.props.fetchFriend(this.props.match.params.id)
 // }
@@ -12,7 +24,7 @@ class AddBillForm extends React.Component {
       bill: {
         balance: "",
         biller_id: this.props.currentUser.username,
-        bill_recipient_id: "",
+        bill_recipient_id: this.props.friendId,
         description: "",
         date: ""
       }
@@ -66,15 +78,6 @@ class AddBillForm extends React.Component {
           <br></br>
           <br></br>
 
-          <label className="add-bill-billee">
-            <input
-              className="add-bill-billee-input"
-              type="text1"
-              placeholder="Friend ID"
-              value={this.state.bill.bill_receipient_id}
-              onChange={this.update('bill_recipient_id')}
-              />
-          </label>
 
           <br></br>
           <br></br>

@@ -8,16 +8,16 @@ import { fetchBills } from '../../actions/bill_actions';
 // console.log(ownProps.match.params);
 // console.log("users:", state.entities.users);
 
-// const bills = state.entities.bills;
 const mapStateToProps = (state, ownProps) => {
   const currentUserId = state.session.id;
   const currentUser = state.entities.users[currentUserId];
   const friend = state.entities.users[ownProps.match.params.id];
-
+  const bills = state.entities.bills;
 
   return {
     currentUser,
-    friend
+    friend,
+    bills
   };
 };
 

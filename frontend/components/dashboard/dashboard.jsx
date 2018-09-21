@@ -23,18 +23,37 @@ class Dashboard extends React.Component {
   }
 
   render() {
+
     if (!this.props.friend) {
       return <div></div>
     }
 
     const dashboard_end = "'s Bills";
 
+
+    const keyId = Object.keys(this.props.bills);
+
+    const results = keyId.map(key => {
+        if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) || (this.props.friend.id === this.props.bills[key]["biller_id"])) {
+          return (
+            <div key={key}>
+              <strong>Transaction {key}</strong>
+              <br></br>
+              <strong>Description:</strong> {this.props.bills[key]["description"]}
+                <br></br>
+                <strong>Friend:</strong> {this.props.friend.username} owes you
+                  <strong>Bill Amount: $</strong>{this.props.bills[key]["balance"]}
+                  </div>
+                )
+        };
+    })
+
     return (
       <div className="dashboard-items">
         <div className="dashboard-main">
           <label className="dashboard-header">{this.props.friend.username}{dashboard_end}</label>
-          <button className="dashboard-add-bill-btn" onClick={() => this.props.openModal('addBill')}>Add a bill</button>
-          <button className="dashboard-settle-btn" onClick={() => this.props.openModal('settleUp')}>Settle up</button>
+          <button className="dashboard-add-bill-btn" onClick={() => this.props.openModal({type: 'addBill', id: this.props.friend.id})}>Add a bill</button>
+          <button className="dashboard-settle-btn" onClick={() => this.props.openModal({type: 'settleUp', id: this.props.friend.id})}>Settle up</button>
         </div>
 
         <div className="dashboard-balance-summary">
@@ -64,14 +83,7 @@ class Dashboard extends React.Component {
         </div>
 
         <div className="dashboard-friend-transactions">
-          <strong>Transaction 1</strong>
-          <br></br>
-          <strong>Description:</strong> Dinner
-          <br></br>
-          <strong>Friend:</strong> {this.props.friend.username} owes you <strong>Bill Amount:</strong> $100
-          <br></br>
-          <br></br>
-          Transaction 2
+          {results}
         </div>
       </div>
     )
