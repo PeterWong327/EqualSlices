@@ -35,9 +35,35 @@ class Dashboard extends React.Component {
 
     const dashboard_end = "'s Bills";
 
+
+    let youOwe = 0;
+    let youAreOwed = 0;
+
     const keyId = Object.keys(this.props.bills);
 
-    // debugger;
+//logic for totaling up balances: Check each bill amount and add to corresponding balance per user.
+    const balances = keyId.forEach(key => {
+      if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) || (this.props.friend.id === this.props.bills[key]["biller_id"])) {
+        if (this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) {
+          return (
+            <div key={key}>
+                  {youAreOwed += this.props.bills[key]["balance"]}
+                  </div>
+                )
+        } else if (this.props.friend.id === this.props.bills[key]["biller_id"]) {
+          return (
+            <div key={key}>
+                {youOwe += this.props.bills[key]["balance"]}
+                  </div>
+                )
+        }
+      }
+    })
+
+    let totalBalance = youAreOwed - youOwe;
+    const color = totalBalance < 0 ? "dashboard-actual-total-balance-red" : "dashboard-actual-total-balance-green";
+
+    // logic for checking who the biller and bill recipients are. Then render corresponding info for each bill id;
     const results = keyId.map(key => {
         if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) || (this.props.friend.id === this.props.bills[key]["biller_id"])) {
           if (this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) {
@@ -48,7 +74,8 @@ class Dashboard extends React.Component {
                 <strong>Description:</strong> {this.props.bills[key]["description"]}
                   <br></br>
                   <strong>Friend:</strong> {this.props.friend.username} owes you
-                    <strong>Bill Amount: $</strong>{this.props.bills[key]["balance"]}
+                    <strong>: $</strong>{this.props.bills[key]["balance"]}
+
                       <br></br>
                       <br></br>
                     </div>
@@ -61,7 +88,7 @@ class Dashboard extends React.Component {
                 <strong>Description:</strong> {this.props.bills[key]["description"]}
                   <br></br>
                   <strong>Friend:</strong> You owe {this.props.friend.username}
-                    <strong>Bill Amount: $</strong>{this.props.bills[key]["balance"]}
+                    <strong>: $</strong>{this.props.bills[key]["balance"]}
                       <br></br>
                       <br></br>
                     </div>
@@ -83,8 +110,9 @@ class Dashboard extends React.Component {
           <div className="dashboard-total-balance">
             Total Balance
 
-              <div className="dashboard-actual-total-balance">
-                $50
+
+              <div className={color}>
+                ${totalBalance}
               </div>
           </div>
 
@@ -92,7 +120,7 @@ class Dashboard extends React.Component {
             You Owe
 
               <div className="dashboard-actual-you-owe">
-                $50
+                ${youOwe}
               </div>
           </div>
 
@@ -100,13 +128,14 @@ class Dashboard extends React.Component {
             You Are Owed
 
               <div className="dashboard-actual-you-are-owed">
-                $100
+                ${youAreOwed}
               </div>
           </div>
         </div>
 
         <div className="dashboard-friend-transactions">
           {results}
+          {balances}
         </div>
       </div>
     )

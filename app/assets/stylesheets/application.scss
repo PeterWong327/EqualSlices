@@ -56,8 +56,12 @@
   border-top: 1px solid darkgray;
 }
 
-.dashboard-actual-total-balance {
+.dashboard-actual-total-balance-green {
   color: green;
+}
+
+.dashboard-actual-total-balance-red {
+  color: red;
 }
 
 .dashboard-total-balance {
