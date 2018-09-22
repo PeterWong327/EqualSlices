@@ -882,7 +882,7 @@ h6 {
 
 input[type="text1"] {
   width: 75%;
-  height: 25px;
+  height: 35px;
   border: none;
   border-bottom: 2px dotted lightgray;
   margin-left: 20px;
@@ -895,6 +895,8 @@ input[type="text1"] {
 
 .settle-bill-form-container {
   display: inline-block;
+  text-align: center;
+  margin-left: 27%;
 }
 
 .settle-bill-prompt {
@@ -904,6 +906,7 @@ input[type="text1"] {
 .payment-btns {
   // display: block;
   background-color: blue;
+  height: 200px;
 }
 
 .cash-btn {
@@ -919,7 +922,7 @@ input[type="text1"] {
 }
 
 .settle-bill-cancel-save{
- margin-top: 80%;
+ margin-top: 10%;
 }
 
 .settle-bill-cancel-btn {
