@@ -6,9 +6,14 @@ import { fetchFriend } from '../../actions/friending_actions';
 const mapStateToProps = (state, ownProps) => {
 
   const friend = state.entities.users[ownProps.match.params.id];
+  const currentUserId = state.session.id;
+  const currentUser = state.entities.users[currentUserId];
+  const bills = state.entities.bills;
 
   return {
-    friend
+    currentUser,
+    friend,
+    bills
   };
 };
 

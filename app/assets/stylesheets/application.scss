@@ -929,10 +929,6 @@ input[type="text1"] {
   color: white;
 }
 
-.payment-btns:hover {
-  filter:brightness(90%);
-}
-
 .cash-btn {
   width: 50%;
   height: 40px;
@@ -940,6 +936,10 @@ input[type="text1"] {
   border-radius: 8px;
   color: white;
   font-size: 15px;
+}
+
+.cash-btn:hover {
+  filter:brightness(90%);
 }
 
 .square-cash-btn {
@@ -951,12 +951,23 @@ input[type="text1"] {
   font-size: 15px;
 }
 
+.square-cash-btn:hover {
+  filter:brightness(90%);
+}
+
 .venmo-btn {
   width: 50%;
   height: 40px;
   background-color: #3D95CE;
   border-radius: 8px;
   font-size: 15px;
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+}
+
+.venmo-btn:hover {
+  filter:brightness(90%);
 }
 
 .settle-bill-cancel-save{
@@ -970,8 +981,12 @@ input[type="text1"] {
   height: 40px;
   width: 90px;
   border-radius: 8px;
+  font-size: 13px;
 }
 
+.settle-bill-cancel-btn:hover {
+  filter:brightness(90%);
+}
 
 .settle-bill-save-btn {
   background-color: #5BC5A7;
@@ -979,5 +994,10 @@ input[type="text1"] {
   height: 40px;
   width: 90px;
   border-radius: 8px;
+  font-size: 13px;
+}
+
+.settle-bill-save-btn:hover {
+  filter:brightness(90%);
 }
 //////////////////////////////////////  Settle Bills //////////////////////////

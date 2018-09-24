@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import FriendDetailContainer from './friend_detail_container';
+import Dashboard from '../dashboard/dashboard';
 
 // {friend} Dashboard
 class FriendDetail extends React.Component {
