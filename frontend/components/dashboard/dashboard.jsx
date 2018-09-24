@@ -69,12 +69,12 @@ class Dashboard extends React.Component {
           if (this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) {
             return (
               <div key={key}>
-                <strong>Date: {this.props.bills[key]["date"]}</strong>
+                Date: <strong>{this.props.bills[key]["date"]}</strong>
                 <br></br>
-                <strong>Description:</strong> {this.props.bills[key]["description"]}
+                Description: <strong>{this.props.bills[key]["description"]}</strong>
                   <br></br>
-                  <strong>Friend:</strong> {this.props.friend.username} owes you
-                    <strong>: $</strong>{this.props.bills[key]["balance"]}
+                  <strong>{this.props.friend.username} </strong> owes you
+                    <strong>: ${this.props.bills[key]["balance"]}</strong>
 
                       <br></br>
                       <br></br>
@@ -83,12 +83,12 @@ class Dashboard extends React.Component {
           } else if (this.props.friend.id === this.props.bills[key]["biller_id"]) {
             return (
               <div key={key}>
-                <strong>Date: {this.props.bills[key]["date"]}</strong>
+                Date: <strong>{this.props.bills[key]["date"]}</strong>
                 <br></br>
-                <strong>Description:</strong> {this.props.bills[key]["description"]}
+                Description: <strong>{this.props.bills[key]["description"]}</strong>
                   <br></br>
-                  <strong>Friend:</strong> You owe {this.props.friend.username}
-                    <strong>: $</strong>{this.props.bills[key]["balance"]}
+                  <strong>You</strong> owe {this.props.friend.username}
+                    <strong>: ${this.props.bills[key]["balance"]}</strong>
                       <br></br>
                       <br></br>
                     </div>
