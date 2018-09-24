@@ -14,18 +14,10 @@ import SplashContainer from './splash/splash';
 import DashboardContainer from './dashboard/dashboard_container';
 import FriendDetailContainer from './friendings/friend_detail_container';
 import AddBillFormContainer from './bills/add_bill_form_container';
+import MainDashboardContainer from './dashboard/dashboard_container';
+// <ProtectedRoute path="/dashboard" component={MainDashboardContainer}></ProtectedRoute>
 
-// <AuthRoute path="/" component={Splash}></AuthRoute>
 
-
-// <Route path="/friendings/:friendId" component={FriendDetailContainer}></Route>
-// <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
-
-// <Redirect to="/" />
-
-// <ProtectedRoute path="/friendings/:id" component={FriendDetailContainer}></ProtectedRoute>
-
-// <ProtectedRoute path="/friendings" component={AddBillFormContainer}></ProtectedRoute>
 const App = () => (
   <div>
     <Modal />

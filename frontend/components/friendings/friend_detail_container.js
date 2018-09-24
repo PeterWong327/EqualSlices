@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import FriendDetail from './friend_detail';
 import { fetchFriend } from '../../actions/friending_actions';
+import { fetchBills } from '../../actions/bill_actions';
 // const friend = state.entities.friendings[ownProps.match.params.id];
 
 const mapStateToProps = (state, ownProps) => {
@@ -19,7 +20,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchFriend: id => dispatch(fetchFriend(id))
+    fetchFriend: id => dispatch(fetchFriend(id)),
+    fetchBills: () => dispatch(fetchBills())
   };
 };
 
