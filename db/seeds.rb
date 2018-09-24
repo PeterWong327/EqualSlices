@@ -73,5 +73,14 @@ Friending.create(friender_id: Lisa.id, friendee_id: Ralph.id)
 Friending.create(friender_id: Marge.id, friendee_id: Patty.id)
 Friending.create(friender_id: Marge.id, friendee_id: Selma.id)
 Friending.create(friender_id: Marge.id, friendee_id: Ned.id)
-Friending.create(friender_id: Marge.id, friendee_id: Patty.id)
 Friending.create(friender_id: Marge.id, friendee_id: Agnes.id)
+
+
+Bill.destroy_all
+
+Bill.create(biller_id: guest.id, bill_recipient_id: Homer.id, description: "breakfast", balance: "15", date: "2018-09-24")
+Bill.create(biller_id: guest.id, bill_recipient_id: Marge.id, description: "lunch", balance: "20", date: "2018-09-24")
+Bill.create(biller_id: guest.id, bill_recipient_id: Bart.id, description: "toys", balance: "16", date: "2018-09-24")
+Bill.create(biller_id: guest.id, bill_recipient_id: Lisa.id, description: "books", balance: "23", date: "2018-09-24")
+Bill.create(biller_id: guest.id, bill_recipient_id: Maggie.id, description: "snack", balance: "5", date: "2018-09-24")
+Bill.create(biller_id: guest.id, bill_recipient_id: Grampa.id, description: "bingo", balance: "10", date: "2018-09-24")

@@ -1,5 +1,5 @@
 class Bill < ApplicationRecord
-  validates :description, :balance, :date, presence: true
+  validates :description, :balance, :date, :bill_recipient_id, presence: true
   validates :balance, numericality: true
 
   belongs_to :biller,
