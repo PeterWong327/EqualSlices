@@ -68,28 +68,45 @@ class Dashboard extends React.Component {
         if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) || (this.props.friend.id === this.props.bills[key]["biller_id"])) {
           if (this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) {
             return (
-              <div key={key}>
+              <div key={key} className="dashboard-bill-details">
+                <br></br>
                 Date: <strong>{this.props.bills[key]["date"]}</strong>
                 <br></br>
-                Description: <strong>{this.props.bills[key]["description"]}</strong>
+                <strong className="dashboard-bill-description-text">{this.props.bills[key]["description"]}</strong>
                   <br></br>
-                  <strong>{this.props.friend.username} </strong> owes you
+                  <div className="dashboard-bill-name-balance">
+                    <strong>{this.props.friend.username} </strong> owes you
                     <strong>: ${this.props.bills[key]["balance"]}</strong>
-
+                  </div>
                       <br></br>
+                        <input
+                          className="dashboard-delete-bill-btn"
+                          type="button"
+                          value="Delete"
+                          >
+                        </input>
                       <br></br>
                     </div>
                   )
           } else if (this.props.friend.id === this.props.bills[key]["biller_id"]) {
             return (
-              <div key={key}>
+              <div key={key} className="dashboard-bill-details">
+                <br></br>
                 Date: <strong>{this.props.bills[key]["date"]}</strong>
                 <br></br>
-                Description: <strong>{this.props.bills[key]["description"]}</strong>
+                <strong className="dashboard-bill-description-text">{this.props.bills[key]["description"]}</strong>
                   <br></br>
-                  <strong>You</strong> owe {this.props.friend.username}
-                    <strong>: ${this.props.bills[key]["balance"]}</strong>
+                  <div className="dashboard-bill-name-balance">
+                      <strong>You</strong> owe {this.props.friend.username}
+                      <strong>: ${this.props.bills[key]["balance"]}</strong>
+                  </div>
                       <br></br>
+                      <input
+                        className="dashboard-delete-bill-btn"
+                        type="button"
+                        value="Delete"
+                        >
+                      </input>
                       <br></br>
                     </div>
                   )

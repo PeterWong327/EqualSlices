@@ -49,6 +49,43 @@
 
 
 ///////////////////////////////// Dashboard ////////////////////////////
+.dashboard-delete-bill-btn {
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  height: 30px;
+  font-family: Lato;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.dashboard-delete-bill-btn:hover {
+  filter:brightness(90%);
+}
+
+.dashboard-bill-name-balance {
+  font-size: 20px;
+  text-align: right;
+}
+
+.dashboard-bill-description-text {
+  font-size: 18px;
+  font-family: Lato;
+}
+
+.dashboard-bill-details {
+  // border-top: 1px solid lightgray;
+  border-top: 0.5px solid gray;
+  background-color: #edecde;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.dashboard-bills-details:hover {
+  background-color: gray;
+}
+
 .dashboard-balance-summary {
   display: flex;
   background-color: #EEEEEE;
@@ -185,7 +222,8 @@
 }
 
 .dashboard-friend-transactions {
-  background-color: orange;
+  background-color: white;
+  // background-color: orange;
 }
 
 .dashboard-items {
@@ -883,7 +921,7 @@ h6 {
 .add-bill-modal-btns {
   display: inline-flex;
   flex-direction: right;
-  margin-left: 60%;
+  margin-left: 55%;
 }
 
 input[type="text1"] {
@@ -978,7 +1016,7 @@ input[type="text1"] {
 
 .settle-bill-cancel-btn {
   background-color: lightgray;
-  height: 40px;
+  height: 30px;
   width: 90px;
   border-radius: 8px;
   font-size: 13px;
@@ -991,7 +1029,7 @@ input[type="text1"] {
 .settle-bill-save-btn {
   background-color: #5BC5A7;
   color: white;
-  height: 40px;
+  height: 30px;
   width: 90px;
   border-radius: 8px;
   font-size: 13px;
