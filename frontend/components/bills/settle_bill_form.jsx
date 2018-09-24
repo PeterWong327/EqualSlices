@@ -16,6 +16,7 @@ class SettleBillForm extends React.Component {
   render() {
     return (
       <div className="settle-bill-form-container">
+        <div className="settle-bill-header">Settle Up</div>
         <br></br>
         <div className="settle-bill-prompt">
           Choose a payment method

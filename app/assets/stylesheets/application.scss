@@ -899,6 +899,17 @@ input[type="text1"] {
   margin-left: 27%;
 }
 
+.settle-bill-header {
+  width: 100%;
+  background-color: #5BCCA8;
+  color: white;
+  font-size: 20px;
+  height: 40px;
+  font-family: Lato, sans-serif;
+  text-align: center;
+  line-height: 40px;
+}
+
 .settle-bill-prompt {
 
 }
@@ -922,7 +933,7 @@ input[type="text1"] {
 }
 
 .settle-bill-cancel-save{
- margin-top: 10%;
+ margin-top: -15%;
 }
 
 .settle-bill-cancel-btn {
