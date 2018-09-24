@@ -17,10 +17,12 @@ class SettleBillForm extends React.Component {
     return (
       <div className="settle-bill-form-container">
         <div className="settle-bill-header">Settle Up</div>
+                  <div onClick={this.props.closeModal} className="add-bill-x-btn">x</div>
         <br></br>
         <div className="settle-bill-prompt">
           Choose a payment method
         </div>
+        <br></br>
         <div onClick={this.props.closeModal} ></div>
 
 
@@ -31,7 +33,7 @@ class SettleBillForm extends React.Component {
             value="Record a cash payment"
           />
   <br></br>
-
+  <br></br>
           <input
             className="square-cash-btn"
             type="submit"
@@ -39,11 +41,12 @@ class SettleBillForm extends React.Component {
           />
 
 <br></br>
+<br></br>
 
           <input
             className="venmo-btn"
             type="submit"
-            value="Venmo!"
+            value="Venmo"
           />
         </div>
 

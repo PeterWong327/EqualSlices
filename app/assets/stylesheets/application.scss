@@ -778,7 +778,13 @@ h6 {
 }
 
 .add-bill-cancel-btn {
-  margin-top: 15px;
+  margin-top: 5px;
+  background-color: lightgray;
+  border-radius: 4px;
+  height: 38px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid gray;
 }
 
 .add-bill-cancel-btn:hover {
@@ -847,7 +853,7 @@ h6 {
   margin-left: 20px;
   height: 25px;
   font-size: 18px;
-  color: lightgray;
+  color: gray;
   border-radius: 5px;
 }
 
@@ -896,7 +902,8 @@ input[type="text1"] {
 .settle-bill-form-container {
   display: inline-block;
   text-align: center;
-  margin-left: 27%;
+  // margin-left: 27%;
+  width: 100%;
 }
 
 .settle-bill-header {
@@ -911,38 +918,66 @@ input[type="text1"] {
 }
 
 .settle-bill-prompt {
-
+  font-family: Lato;
+  color: gray;
 }
 
 .payment-btns {
   // display: block;
-  background-color: blue;
+  // background-color: blue;
   height: 200px;
+  color: white;
+}
+
+.payment-btns:hover {
+  filter:brightness(90%);
 }
 
 .cash-btn {
-
+  width: 50%;
+  height: 40px;
+  background-color: #5BCCA8;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
 }
 
 .square-cash-btn {
-
+  width: 50%;
+  height: 40px;
+  background-color: #65D737;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
 }
 
 .venmo-btn {
-
+  width: 50%;
+  height: 40px;
+  background-color: #3D95CE;
+  border-radius: 8px;
+  font-size: 15px;
 }
 
 .settle-bill-cancel-save{
- margin-top: -15%;
+ margin-top: -10%;
+ display: flex;
+ justify-content: space-around;
 }
 
 .settle-bill-cancel-btn {
-
+  background-color: lightgray;
+  height: 40px;
+  width: 90px;
+  border-radius: 8px;
 }
 
 
 .settle-bill-save-btn {
   background-color: #5BC5A7;
   color: white;
+  height: 40px;
+  width: 90px;
+  border-radius: 8px;
 }
 //////////////////////////////////////  Settle Bills //////////////////////////
