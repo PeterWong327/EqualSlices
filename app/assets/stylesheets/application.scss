@@ -66,6 +66,7 @@
 .dashboard-bill-name-balance {
   font-size: 20px;
   text-align: right;
+  width: 80%;
 }
 
 .dashboard-bill-description-text {
@@ -76,9 +77,9 @@
 .dashboard-bill-details {
   // border-top: 1px solid lightgray;
   border-top: 0.5px solid gray;
-  background-color: #edecde;
-  padding-left: 5px;
-  padding-right: 5px;
+  background-color: #f6f6f6;
+  padding-left: 75px;
+  padding-right: 25px;
   padding-bottom: 5px;
 }
 
@@ -590,7 +591,7 @@ box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05
 .login-input {
   width: 98% !important;
   font-size: 20px;
-  color: #BBBBBB;
+  color: black;
   border-radius: 4px;
     // border-top-left-radius: 4px;
     // border-top-right-radius: 4px;

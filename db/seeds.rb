@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 
-guest = User.create(username: "Demo", email: "demo@equalslices.com" , password: "password")
+Demo = User.create(username: "Demo", email: "demo@equalslices.com" , password: "password")
 
 Homer = User.create(username: "Homer", email: "chunkylover53@aol.com" , password: "donuts")
 Marge = User.create(username: "Marge", email: "marge@simpsons.com" , password: "123456")
@@ -33,12 +33,12 @@ Ralph = User.create(username: "Ralph", email: "ralph@wiggum.com", password: "123
 
 Friending.destroy_all
 
-Friending.create(friender_id: guest.id, friendee_id: Homer.id)
-Friending.create(friender_id: guest.id, friendee_id: Marge.id)
-Friending.create(friender_id: guest.id, friendee_id: Bart.id)
-Friending.create(friender_id: guest.id, friendee_id: Lisa.id)
-Friending.create(friender_id: guest.id, friendee_id: Maggie.id)
-Friending.create(friender_id: guest.id, friendee_id: Grampa.id)
+Friending.create(friender_id: Demo.id, friendee_id: Homer.id)
+Friending.create(friender_id: Demo.id, friendee_id: Marge.id)
+Friending.create(friender_id: Demo.id, friendee_id: Bart.id)
+Friending.create(friender_id: Demo.id, friendee_id: Lisa.id)
+Friending.create(friender_id: Demo.id, friendee_id: Maggie.id)
+Friending.create(friender_id: Demo.id, friendee_id: Grampa.id)
 
 Friending.create(friender_id: Ned.id, friendee_id: Edna.id)
 Friending.create(friender_id: Seymour.id, friendee_id: Edna.id)
@@ -78,29 +78,26 @@ Friending.create(friender_id: Marge.id, friendee_id: Agnes.id)
 
 Bill.destroy_all
 
-Bill.create(biller_id: guest.id, bill_recipient_id: Homer.id, description: "breakfast", balance: "15", date: "2018-09-24")
-Bill.create(biller_id: guest.id, bill_recipient_id: Marge.id, description: "babysitting", balance: "100", date: "2018-09-24")
-Bill.create(biller_id: guest.id, bill_recipient_id: Bart.id, description: "toys", balance: "16", date: "2018-09-24")
-Bill.create(biller_id: guest.id, bill_recipient_id: Lisa.id, description: "books", balance: "23", date: "2018-09-24")
-Bill.create(biller_id: guest.id, bill_recipient_id: Maggie.id, description: "snack", balance: "5", date: "2018-09-24")
-Bill.create(biller_id: guest.id, bill_recipient_id: Grampa.id, description: "bingo", balance: "10", date: "2018-09-24")
+Bill.create(biller_id: Demo.id, bill_recipient_id: Homer.id, description: "breakfast", balance: "15", date: "2018-09-24")
+Bill.create(biller_id: Demo.id, bill_recipient_id: Marge.id, description: "babysitting", balance: "100", date: "2018-09-24")
+Bill.create(biller_id: Demo.id, bill_recipient_id: Bart.id, description: "toys", balance: "16", date: "2018-09-24")
+Bill.create(biller_id: Demo.id, bill_recipient_id: Lisa.id, description: "books", balance: "23", date: "2018-09-24")
+Bill.create(biller_id: Demo.id, bill_recipient_id: Maggie.id, description: "snack", balance: "5", date: "2018-09-24")
+Bill.create(biller_id: Demo.id, bill_recipient_id: Grampa.id, description: "bingo", balance: "10", date: "2018-09-24")
 
-Bill.create(biller_id: Homer.id, bill_recipient_id: guest.id, description: "me so hungy", balance: "5", date: "2018-09-23")
-Bill.create(biller_id: Homer.id, bill_recipient_id: guest.id, description: "beer at Moe's", balance: "10", date: "2018-09-22")
-Bill.create(biller_id: Homer.id, bill_recipient_id: guest.id, description: "donuts", balance: "3", date: "2018-09-21")
-Bill.create(biller_id: Homer.id, bill_recipient_id: guest.id, description: "movies", balance: "13", date: "2018-09-20")
-Bill.create(biller_id: Homer.id, bill_recipient_id: guest.id, description: "Krusty Burger", balance: "8", date: "2018-09-19")
+Bill.create(biller_id: Homer.id, bill_recipient_id: Demo.id, description: "me so hungy", balance: "5", date: "2018-09-23")
+Bill.create(biller_id: Homer.id, bill_recipient_id: Demo.id, description: "beer at Moe's", balance: "10", date: "2018-09-22")
+Bill.create(biller_id: Homer.id, bill_recipient_id: Demo.id, description: "donuts", balance: "3", date: "2018-09-21")
+Bill.create(biller_id: Homer.id, bill_recipient_id: Demo.id, description: "movies", balance: "13", date: "2018-09-20")
+Bill.create(biller_id: Homer.id, bill_recipient_id: Demo.id, description: "Krusty Burger", balance: "8", date: "2018-09-19")
 
-Bill.create(biller_id: Marge.id, bill_recipient_id: guest.id, description: "pizza", balance: "7", date: "2018-09-18")
-Bill.create(biller_id: Marge.id, bill_recipient_id: guest.id, description: "lunch", balance: "20", date: "2018-09-10")
-Bill.create(biller_id: Marge.id, bill_recipient_id: guest.id, description: "homemade cookies", balance: "51", date: "2018-09-03")
+Bill.create(biller_id: Marge.id, bill_recipient_id: Demo.id, description: "pizza", balance: "7", date: "2018-09-18")
+Bill.create(biller_id: Marge.id, bill_recipient_id: Demo.id, description: "lunch", balance: "20", date: "2018-09-10")
+Bill.create(biller_id: Marge.id, bill_recipient_id: Demo.id, description: "homemade cookies", balance: "51", date: "2018-09-03")
 Bill.create(biller_id: Marge.id, bill_recipient_id: Homer.id, description: "date night", balance: "30", date: "2018-09-02")
 Bill.create(biller_id: Marge.id, bill_recipient_id: Patty.id, description: "drinks", balance: "5", date: "2018-09-01")
 Bill.create(biller_id: Marge.id, bill_recipient_id: Selma.id, description: "drinks", balance: "5", date: "2018-09-01")
 
-Bill.create(biller_id: Bart.id, bill_recipient_id: guest.id, description: "homemade cookies", balance: "51", date: "2018-09-01")
-Bill.create(biller_id: Bart.id, bill_recipient_id: guest.id, description: "homemade cookies", balance: "51", date: "2018-09-01")
-Bill.create(biller_id: Bart.id, bill_recipient_id: guest.id, description: "homemade cookies", balance: "51", date: "2018-09-01")
 Bill.create(biller_id: Bart.id, bill_recipient_id: Homer.id, description: "weekly allowance", balance: "10", date: "2018-08-27")
 Bill.create(biller_id: Bart.id, bill_recipient_id: Homer.id, description: "eat my shorts!", balance: "5", date: "2018-08-27")
 Bill.create(biller_id: Bart.id, bill_recipient_id: Lisa.id, description: "taking out the trash", balance: "2", date: "2018-08-25")
@@ -110,6 +107,6 @@ Bill.create(biller_id: Lisa.id, bill_recipient_id: Marge.id, description: "doing
 Bill.create(biller_id: Lisa.id, bill_recipient_id: Homer.id, description: "saxophone lessons", balance: "25", date: "2018-08-24")
 Bill.create(biller_id: Lisa.id, bill_recipient_id: Bart.id, description: "doing your homework", balance: "51", date: "2018-09-01")
 Bill.create(biller_id: Lisa.id, bill_recipient_id: Maggie.id, description: "changing your diapers", balance: "1", date: "2018-08-23")
-Bill.create(biller_id: Lisa.id, bill_recipient_id: guest.id, description: "proofreading paper", balance: "11", date: "2018-08-23")
-Bill.create(biller_id: Lisa.id, bill_recipient_id: guest.id, description: "snacks for science fair", balance: "8", date: "2018-08-22")
-Bill.create(biller_id: Lisa.id, bill_recipient_id: guest.id, description: "book club fee", balance: "4", date: "2018-08-20")
+Bill.create(biller_id: Lisa.id, bill_recipient_id: Demo.id, description: "proofreading paper", balance: "11", date: "2018-08-23")
+Bill.create(biller_id: Lisa.id, bill_recipient_id: Demo.id, description: "snacks for science fair", balance: "8", date: "2018-08-22")
+Bill.create(biller_id: Lisa.id, bill_recipient_id: Demo.id, description: "book club fee", balance: "4", date: "2018-08-20")
