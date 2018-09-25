@@ -321,17 +321,37 @@
   align-items: center;
 }
 
+.splash-frontpage {
+  max-height: 300px;
+  max-width: 575px;
+  margin: 10px;
+}
+
+.splash-frontpage:hover {
+  transform: scale(1.5, 1.5);
+}
+
 .splash-phone-img {
     width: auto;
     height: auto;
     max-width: 600px;
     max-height: 600px;
+    // margin: 10px;
 }
 
 .splash-phone-img:hover {
   transform: scale(1.03, 1.03);
   // opacity: 1;
 }
+
+.splash-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
  .homepage-link {
    display: block;
@@ -373,6 +393,7 @@
 .recent-activity:hover {
   background-color: lightgray;
   color: gray;
+
 }
 
 .add-friend-form-container {

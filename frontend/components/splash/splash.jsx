@@ -15,8 +15,21 @@ const Splash = () => {
           Totally free for web, iPhone, and Android.
         </h4>
       </div>
-      <img className="splash-phone-img" src={window.images.splash}></img>
+
+      <div className="splash-images">
+        <img className="splash-phone-img" src={window.images.splash}></img>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <img className="splash-frontpage" src={window.images.frontpage}></img>
+        <br></br>
+      </div>
+
       <br/>
+      <br></br>
+      <br></br>
+      <br></br>
       <Link className="splash-signup-btn-top" to="/signup">Get started now!
         <div className="splash-signup-btn-itsfree">(it's free!)</div>
       </Link>
