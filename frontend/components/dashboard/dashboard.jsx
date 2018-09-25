@@ -116,9 +116,13 @@ class Dashboard extends React.Component {
 
     })
 
+    let currentFriend = this.props.friend.username;
+    let character = window.images.currentFriend;
+
     return (
       <div className="dashboard-items">
         <div className="dashboard-main">
+          <img className="homer-profile-pic" src={window.images[`${currentFriend}`]}></img>
           <label className="dashboard-header">{this.props.friend.username}{dashboard_end}</label>
           <button className="dashboard-add-bill-btn" onClick={() => this.props.openModal({type: 'addBill', id: this.props.friend.id})}>Add a bill</button>
           <button className="dashboard-settle-btn" onClick={() => this.props.openModal({type: 'settleUp', id: this.props.friend.id})}>Settle up</button>

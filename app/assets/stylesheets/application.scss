@@ -49,6 +49,11 @@
 
 
 ///////////////////////////////// Dashboard ////////////////////////////
+.homer-profile-pic {
+  width: auto;
+  height: auto;
+}
+
 .dashboard-delete-bill-btn {
   background-color: red;
   border-radius: 5px;
@@ -185,6 +190,7 @@
   font-size: 24px !important;
   font-weight: bold;
   width: 45%;
+  margin-left: 10px;
 }
 
 .dashboard-add-bill-btn {
@@ -196,7 +202,7 @@
   border: 0.5px solid #15987D;
   margin: 12px;
   height: 37px;
-  // width: 100%;
+  min-height: 50px;
   margin-left: 10%;
 }
 
@@ -213,9 +219,7 @@
   border: 0.5px solid #15987D;
   margin: 12px;
   height: 37px;
-  // justify-content: space-around;
-  // margin-left: 40%;
-  // width: 100%;
+  min-height: 50px;
 }
 
 .dashboard-settle-btn:hover {

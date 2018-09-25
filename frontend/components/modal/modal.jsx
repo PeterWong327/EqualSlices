@@ -9,28 +9,6 @@ import {clearErrors} from '../../actions/session_actions';
 
 function Modal({modal, closeModal}) {
 
-  console.log(modal);
-
-  // if (!modal) {
-  //   return null;
-  // }
-  // let component;
-  // switch (modal) {
-  //   case 'login':
-  //     component = <LoginFormContainer />;
-  //     break;
-  //   case 'signup':
-  //     component = <SignupFormContainer />;
-  //     break;
-  //   case 'addBill':
-  //     component = <AddBillFormContainer test="helloooooooooo"/>;
-  //     break;
-  //   case 'settleUp':
-  //     component = <SettleBillContainer />;
-  //     break;
-  //   default:
-  //     return null;
-  // }
   if (!modal) {
     return null;
   }
