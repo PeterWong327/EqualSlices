@@ -36,13 +36,18 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   //   Totally free for web, iPhone, and Android.
   // </h4>
   // <h2>SPLIT EXPENSES WITH FRIENDS</h2>
-
+    // let currentFriend = this.props.friend.username;
 
   const personalGreeting = () => (
     <hgroup className="header-group">
-      <h2 className="header-name">Logged in as {currentUser.username}</h2>
-      <br/>
-      <button className="header-button" onClick={logout}>Log out</button>
+      <img className="current-user-profile-pic" src={window.images[`${currentUser.username}`] || window.images.default}></img>
+
+      <div className="header-logged-in-and-log-out">
+        <h2 className="header-name">Logged in as {currentUser.username}</h2>
+        <br/>
+        <button className="header-button" onClick={logout}>Log out</button>
+      </div>
+
     </hgroup>
   )
 
