@@ -12,7 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     currentUser,
-    bills
+    bills,
+    allUsers: state.entities.users
   };
 };
 

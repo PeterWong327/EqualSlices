@@ -14,9 +14,10 @@ import SplashContainer from './splash/splash';
 import DashboardContainer from './dashboard/dashboard_container';
 import FriendDetailContainer from './friendings/friend_detail_container';
 import AddBillFormContainer from './bills/add_bill_form_container';
-import MainDashboardContainer from './dashboard/dashboard_container';
-// <ProtectedRoute path="/dashboard" component={MainDashboardContainer}></ProtectedRoute>
+import MainDashboardContainer from './dashboard/main_dashboard_container';
 
+
+// <ProtectedRoute path="/dashboard" component={FriendSearchContainer}></ProtectedRoute>
 
 const App = () => (
   <div>
@@ -32,13 +33,12 @@ const App = () => (
 
 
       <div className="friend-list-container2">
-        <ProtectedRoute path="/dashboard" component={FriendIndexContainer}></ProtectedRoute>
-        <ProtectedRoute path="/dashboard" component={FriendSearchContainer}></ProtectedRoute>
-        <ProtectedRoute path="/friendings" component={FriendIndexContainer}></ProtectedRoute>
-        <ProtectedRoute path="/friendings" component={FriendSearchContainer}></ProtectedRoute>
+        <ProtectedRoute path="/" component={FriendIndexContainer}></ProtectedRoute>
+        <ProtectedRoute path="/" component={FriendSearchContainer}></ProtectedRoute>
       </div>
 
       <div className="dashboard-friend-detail-containers">
+        <ProtectedRoute exact path="/dashboard" component={MainDashboardContainer}></ProtectedRoute>
         <ProtectedRoute path="/friendings/:id" component={DashboardContainer}></ProtectedRoute>
       </div>
 

@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
   const currentUserId = state.session.id;
   const currentUser = state.entities.users[currentUserId];
   const friendId = state.ui.modal.id;
-  // debugger
+
 
 
 

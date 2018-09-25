@@ -10,6 +10,7 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
+
     this.props.fetchFriend(this.props.match.params.id).then(
       () => this.props.fetchBills().then(() => this.setState({}))
     )
