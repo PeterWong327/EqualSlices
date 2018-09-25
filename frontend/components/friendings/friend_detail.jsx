@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import FriendDetailContainer from './friend_detail_container';
 import Dashboard from '../dashboard/dashboard';
 
-// {friend} Dashboard
+//Displays total balance on friend-balance-container
 class FriendDetail extends React.Component {
   constructor(props) {
     super(props);
@@ -35,13 +35,13 @@ class FriendDetail extends React.Component {
 //logic for totaling up balances: Check each bill amount and add to corresponding balance per user.
     const balances = keyId.forEach(key => {
       if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) || (this.props.friend.id === this.props.bills[key]["biller_id"])) {
-        if (this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) {
+        if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) && (this.props.currentUser.id === this.props.bills[key]["biller_id"])) {
           return (
             <div key={key}>
                   {youAreOwed += this.props.bills[key]["balance"]}
                   </div>
                 )
-        } else if (this.props.friend.id === this.props.bills[key]["biller_id"]) {
+        } else if ((this.props.friend.id === this.props.bills[key]["biller_id"]) && (this.props.currentUser.id === this.props.bills[key]["bill_recipient_id"])) {
           return (
             <div key={key}>
                 {youOwe += this.props.bills[key]["balance"]}
@@ -57,7 +57,7 @@ class FriendDetail extends React.Component {
     // logic for checking who the biller and bill recipients are. Then render corresponding info for each bill id;
     const results = keyId.map(key => {
         if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) || (this.props.friend.id === this.props.bills[key]["biller_id"])) {
-          if (this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) {
+          if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) && (this.props.currentUserId === this.props.bills[key]["biller_id"])){
             return (
               <div key={key} className="dashboard-bill-details">
                 <br></br>
@@ -66,7 +66,7 @@ class FriendDetail extends React.Component {
                 <strong className="dashboard-bill-description-text">{this.props.bills[key]["description"]}</strong>
                   <br></br>
                   <div className="dashboard-bill-name-balance">
-                    <strong>{this.props.friend.username} </strong> owes you
+                    <strong>{this.props.friend.username} </strong> owes
                     <strong>: ${this.props.bills[key]["balance"]}</strong>
                   </div>
                       <br></br>
@@ -79,7 +79,7 @@ class FriendDetail extends React.Component {
                       <br></br>
                     </div>
                   )
-          } else if (this.props.friend.id === this.props.bills[key]["biller_id"]) {
+          } else if ((this.props.friend.id === this.props.bills[key]["biller_id"]) && (this.props.currentUserId === this.props.bills[key]["biller_id"])) {
             return (
               <div key={key} className="dashboard-bill-details">
                 <br></br>
@@ -88,7 +88,7 @@ class FriendDetail extends React.Component {
                 <strong className="dashboard-bill-description-text">{this.props.bills[key]["description"]}</strong>
                   <br></br>
                   <div className="dashboard-bill-name-balance">
-                      <strong>You</strong> owe {this.props.friend.username}
+                      <strong>You</strong> owes {this.props.friend.username}
                       <strong>: ${this.props.bills[key]["balance"]}</strong>
                   </div>
                       <br></br>

@@ -44,13 +44,13 @@ class Dashboard extends React.Component {
 //logic for totaling up balances: Check each bill amount and add to corresponding balance per user.
     const balances = keyId.forEach(key => {
       if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) || (this.props.friend.id === this.props.bills[key]["biller_id"])) {
-        if (this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) {
+        if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) && (this.props.currentUser.id === this.props.bills[key]["biller_id"])) {
           return (
             <div key={key}>
                   {youAreOwed += this.props.bills[key]["balance"]}
                   </div>
                 )
-        } else if (this.props.friend.id === this.props.bills[key]["biller_id"]) {
+        } else if ((this.props.friend.id === this.props.bills[key]["biller_id"]) && (this.props.currentUser.id === this.props.bills[key]["bill_recipient_id"])) {
           return (
             <div key={key}>
                 {youOwe += this.props.bills[key]["balance"]}
@@ -62,11 +62,12 @@ class Dashboard extends React.Component {
 
     let totalBalance = youAreOwed - youOwe;
     const color = totalBalance < 0 ? "dashboard-actual-total-balance-red" : "dashboard-actual-total-balance-green";
+    let totalBalanceEdited = totalBalance < 0 ? "-$" + Math.abs(totalBalance) : "$" + totalBalance;
 
     // logic for checking who the biller and bill recipients are. Then render corresponding info for each bill id;
     const results = keyId.map(key => {
         if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) || (this.props.friend.id === this.props.bills[key]["biller_id"])) {
-          if (this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) {
+          if ((this.props.friend.id === this.props.bills[key]["bill_recipient_id"]) && (this.props.currentUser.id === this.props.bills[key]["biller_id"])) {
             return (
               <div key={key} className="dashboard-bill-details">
                 <br></br>
@@ -88,7 +89,7 @@ class Dashboard extends React.Component {
                       <br></br>
                     </div>
                   )
-          } else if (this.props.friend.id === this.props.bills[key]["biller_id"]) {
+          } else if ((this.props.friend.id === this.props.bills[key]["biller_id"]) && (this.props.currentUser.id === this.props.bills[key]["bill_recipient_id"])) {
             return (
               <div key={key} className="dashboard-bill-details">
                 <br></br>
@@ -129,7 +130,7 @@ class Dashboard extends React.Component {
 
 
               <div className={color}>
-                ${totalBalance}
+                {totalBalanceEdited}
               </div>
           </div>
 
