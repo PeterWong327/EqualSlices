@@ -58,6 +58,7 @@ Friending.create(friender_id: Homer.id, friendee_id: Barney.id)
 Friending.create(friender_id: Homer.id, friendee_id: Carl.id)
 Friending.create(friender_id: Homer.id, friendee_id: Lenny.id)
 Friending.create(friender_id: Homer.id, friendee_id: Montgomery.id)
+Friending.create(friender_id: Homer.id, friendee_id: Maggie.id)
 
 Friending.create(friender_id: Ned.id, friendee_id: Homer.id)
 Friending.create(friender_id: Ned.id, friendee_id: Seymour.id)
@@ -75,6 +76,8 @@ Friending.create(friender_id: Marge.id, friendee_id: Selma.id)
 Friending.create(friender_id: Marge.id, friendee_id: Ned.id)
 Friending.create(friender_id: Marge.id, friendee_id: Agnes.id)
 Friending.create(friender_id: Marge.id, friendee_id: Maggie.id)
+
+Friending.create(friender_id: Maggie.id, friendee_id: Grampa.id)
 
 
 Bill.destroy_all

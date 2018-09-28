@@ -54,6 +54,18 @@ class AddBillForm extends React.Component {
     e.target.reset();
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
 
     return (
@@ -116,6 +128,7 @@ class AddBillForm extends React.Component {
                 value="Save Bill!"
                 onClick={() => {this.props.createBill(this.state.bill)}}
               />
+
             </div>
 
         </form>

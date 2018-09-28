@@ -9,11 +9,12 @@ const mapStateToProps = (state, ownProps) => {
   const currentUserId = state.session.id;
   const currentUser = state.entities.users[currentUserId];
   const bills = state.entities.bills;
+  const allUsers = state.entities.users;
 
   return {
     currentUser,
     bills,
-    allUsers: state.entities.users
+    allUsers
   };
 };
 
