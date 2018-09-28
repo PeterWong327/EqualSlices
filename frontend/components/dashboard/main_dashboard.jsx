@@ -28,14 +28,14 @@ class MainDashboard extends React.Component {
         let friendRecipientId = this.props.bills[key]["bill_recipient_id"];
         let friendBillerId = this.props.bills[key]["biller_id"];
 
-        // console.log(this.props.currentUser.id)
-        // console.log("here is the current user's id ^^^^^^^^^^");
-        // console.log(this.props.bills[key]["bill_recipient_id"]);
-        // console.log("here is the bill recipient id  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-        // console.log(this.props.allUsers[friendRecipientId]['id']);
-        // console.log("here is the id of the recipient");
-        // console.log(this.props.allUsers[friendBillerId]['id']);
-        // console.log("here is the id of the biller");
+        console.log(this.props.currentUser.id)
+        console.log("here is the current user's id ^^^^^^^^^^");
+        console.log(this.props.bills[key]["bill_recipient_id"]);
+        console.log("here is the bill recipient id  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+        console.log(this.props.allUsers[friendRecipientId]['id']);
+        console.log("here is the id of the recipient");
+        console.log(this.props.allUsers[friendBillerId]['id']);
+        console.log("here is the id of the biller");
 
         if (this.props.currentUser.id === this.props.allUsers[friendRecipientId]["id"]) {
           return (

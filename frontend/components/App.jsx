@@ -41,7 +41,6 @@ const App = () => (
       </div>
 
       <div className="dashboard-friend-detail-containers">
-        <ProtectedRoute exact path="/dashboard" component={MainDashboardContainer}></ProtectedRoute>
         <ProtectedRoute path="/friendings/:id" component={DashboardContainer}></ProtectedRoute>
       </div>
 
