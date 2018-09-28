@@ -14,13 +14,17 @@ class MainDashboard extends React.Component {
   }
 
   render() {
+
     const apostrophe = "'s'";
     const keyId = Object.keys(this.props.bills);
     const results = keyId.map(key => {
+
       let friendRecipientId = this.props.bills[key]["bill_recipient_id"];
       let friendBillerId = this.props.bills[key]["biller_id"];
 
+
       if ((this.props.currentUser.id === this.props.bills[key]["bill_recipient_id"]) || (this.props.currentUser.id === this.props.bills[key]["biller_id"])) {
+
         if (this.props.currentUser.id === this.props.bills[key]["bill_recipient_id"]) {
           return (
             <div key={key} className="main-dashboard-bill-details">

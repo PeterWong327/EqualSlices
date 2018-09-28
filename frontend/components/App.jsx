@@ -19,6 +19,9 @@ import MainDashboardContainer from './dashboard/main_dashboard_container';
 
 // <ProtectedRoute path="/dashboard" component={FriendSearchContainer}></ProtectedRoute>
 
+// <ProtectedRoute exact path="/dashboard" component={MainDashboardContainer}></ProtectedRoute> //in dashboard friend detail container
+
+
 const App = () => (
   <div>
     <Modal />
@@ -38,7 +41,7 @@ const App = () => (
       </div>
 
       <div className="dashboard-friend-detail-containers">
-        <ProtectedRoute exact path="/dashboard" component={MainDashboardContainer}></ProtectedRoute>
+
         <ProtectedRoute path="/friendings/:id" component={DashboardContainer}></ProtectedRoute>
       </div>
 
