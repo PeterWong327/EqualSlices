@@ -444,7 +444,8 @@
    border: 1px solid #ccc;
    margin-left: 10px;
    width: 181px;
-   height: 200px;
+   // height: 200px;
+   height: 25%;
    border-bottom-left-radius: 30px;
    border-bottom-right-radius: 30px;
  }
@@ -491,6 +492,10 @@
   filter:brightness(90%);
 }
 
+
+.add-friend-errors {
+  color: red;
+}
 ////////////////////////////////// SIDEBAR /////////////////////////////
 
 
@@ -538,6 +543,7 @@
   // padding: 0;
   width: 150px;
 }
+
 
 
 /////////////////////////////////// FRIENDINGS ////////////////////////
